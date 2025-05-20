@@ -1,0 +1,37 @@
+/*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+*/
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: pink;
+}
+
+#container {
+  width: 500px;
+  background-color: blanchedalmond;
+}
+
+main {
+  background-color: cadetblue;
+}
