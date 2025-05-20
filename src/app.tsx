@@ -1,8 +1,5 @@
-import { useState } from 'preact/hooks'
+import { useState } from 'preact/hooks';
 
 export function App() {
-
-  return (
-    <p>I AM THE APP</p>
-  )
+  return <h1>I AM THE APP</h1>;
 }

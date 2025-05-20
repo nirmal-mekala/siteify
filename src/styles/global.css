@@ -24,14 +24,36 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
-  background-color: pink;
 }
 
 #container {
   width: 500px;
-  background-color: blanchedalmond;
+}
+
+header {
+  background-color: darkseagreen;
 }
 
 main {
   background-color: cadetblue;
+}
+
+h1 {
+  font-family: 'Recursive', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-weight: 500;
+  font-variation-settings:
+    'CASL' 0,
+    'MONO' 0;
+}
+
+p {
+  font-family: 'Recursive', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1rem;
+  font-variation-settings:
+    'CASL' 0,
+    'MONO' 0;
 }
