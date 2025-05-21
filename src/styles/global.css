@@ -64,7 +64,7 @@ p {
   font-size: var(--text-md);
   color: var(--color-1);
   font-family: var(--font-family-sans);
-  font-weight: var(--font-weight-base);
+  font-weight: var(--font-weight-light);
   margin-bottom: var(--text-margin-bottom);
   font-variation-settings:
     'CASL' 0,
@@ -97,7 +97,7 @@ main > small {
     font-variation-settings:
       'CASL' 0.5,
       'MONO' 0,
-      'slnt' -5;
+      'slnt' -2;
     font-weight: var(--font-weight-bold);
   }
 }
@@ -130,7 +130,7 @@ a:visited {
   padding: var(--spacing-text);
   text-decoration: none;
   color: var(--color-3);
-  border: 2px solid var(--background-1)
+  border: 2px solid var(--background-1);
 }
 
 a:hover,
