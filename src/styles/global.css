@@ -27,7 +27,7 @@ body {
 }
 
 #container {
-  width: 500px;
+  width: 100%;
 }
 
 main {
@@ -57,11 +57,18 @@ textarea {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /*  font-size: 1rem;*/
+  padding: 0 1rem 0 1rem;
 }
 
 a,
@@ -79,4 +86,13 @@ a:hover {
   font-variation-settings:
     'CASL' 1,
     'slnt' -5;
+}
+
+@media screen and (min-width: 768px) {
+  #container {
+    max-width: 768px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
 }
