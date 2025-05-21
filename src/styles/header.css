@@ -4,5 +4,5 @@ header {
 }
 
 header a {
-  font-size: 2rem;
+  font-size: var(--text-xxl);
 }
