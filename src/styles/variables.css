@@ -26,9 +26,9 @@ body {
 body.light {
   --background-1: #fff;
   --background-2: #f5f5f5;
-  --color-1: dimgrey;
-  --color-2: darkcyan;
-  --color-3: darkmagenta;
+  --color-1: black;
+  --color-2: seagreen;
+  --color-3: seagreen;
 }
 
 body.dark {
@@ -41,9 +41,9 @@ body.dark {
 
 @media screen and (min-width: 768px) {
   :root {
-    --text-xxl: 2.75em;
-    --text-xl: 2.25rem;
-    --text-lg: 1.75rem;
+    --text-xxl: 2em;
+    --text-xl: 1.75rem;
+    --text-lg: 1.5rem;
     --text-md: 1.25rem;
     --text-sm: 1rem;
     --text-xs: 0.75rem;

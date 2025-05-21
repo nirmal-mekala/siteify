@@ -64,11 +64,11 @@ p {
   font-size: var(--text-md);
   color: var(--color-1);
   font-family: var(--font-family-sans);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-base);
   margin-bottom: var(--text-margin-bottom);
   font-variation-settings:
-    'CASL' 0,
-    'MONO' 0;
+    'CASL' 0.4,
+    'MONO' 1;
 }
 
 /* blockquotes? code blocks? */
@@ -89,14 +89,14 @@ main > small {
   0% {
     font-variation-settings:
       'CASL' 0,
-      'MONO' 0,
+      'MONO' 1,
       'slnt' 0;
     font-weight: var(--font-weight-base);
   }
   100% {
     font-variation-settings:
       'CASL' 0.5,
-      'MONO' 0,
+      'MONO' 1,
       'slnt' -2;
     font-weight: var(--font-weight-bold);
   }
@@ -114,7 +114,7 @@ main > small {
     font-variation-settings:
       'CASL' 0.75,
       'MONO' 1,
-      'slnt' -5;
+      'slnt' -2;
     font-weight: var(--font-weight-bold);
   }
 }
