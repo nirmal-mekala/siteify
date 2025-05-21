@@ -10,9 +10,33 @@
   --font-family-sans: 'Recursive', sans-serif;
   --font-family-mono: 'Recursive', monospace;
   --font-weight-light: 300;
-  --font-weight-base: 500;
+  --font-weight-base: 400;
   --font-weight-bold: 700;
   --text-margin-bottom: 0.5rem;
+}
+
+body {
+  --background-1: inherit;
+  --background-2: inherit;
+  --color-1: inherit;
+  --color-2: inherit;
+  --color-3: inherit;
+}
+
+body.light {
+  --background-1: #fff;
+  --background-2: #f5f5f5;
+  --color-1: dimgrey;
+  --color-2: darkcyan;
+  --color-3: darkmagenta;
+}
+
+body.dark {
+  --background-1: #111111;
+  --background-2: #222222;
+  --color-1: #d2d2d2;
+  --color-2: #5faf5f;
+  --color-3: #af87d7;
 }
 
 @media screen and (min-width: 768px) {

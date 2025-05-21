@@ -1,10 +1,14 @@
 header {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
+/* todo needs its own animation */
+
 header a,
-header a:hover {
+header a:hover,
+header a:focus {
+  outline: none;
   background-color: transparent;
   font-size: var(--text-xxl);
   padding: 0;

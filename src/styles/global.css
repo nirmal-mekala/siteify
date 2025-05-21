@@ -3,6 +3,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
+  background: var(--background-1);
 }
 
 #page {
@@ -17,6 +18,7 @@ h1 {
   font-size: var(--text-xxl);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
+  color: var(--color-2);
   margin-bottom: var(--text-margin-bottom);
   font-variation-settings:
     'CASL' 0,
@@ -25,6 +27,7 @@ h1 {
 
 h2 {
   font-size: var(--text-xl);
+  color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--text-margin-bottom);
@@ -35,6 +38,7 @@ h2 {
 
 h3 {
   font-size: var(--text-lg);
+  color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--text-margin-bottom);
@@ -47,6 +51,7 @@ h4,
 h5,
 h6 {
   font-size: var(--text-md);
+  color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--text-margin-bottom);
@@ -57,6 +62,7 @@ h6 {
 
 p {
   font-size: var(--text-md);
+  color: var(--color-1);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-base);
   margin-bottom: var(--text-margin-bottom);
@@ -72,9 +78,12 @@ main > h2,
 main > h3,
 main > h4,
 main > h5,
-main > h6 {
+main > h6,
+main > small {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
 }
+
+/* TODO variable-ize variation settings */
 
 @keyframes hover {
   0% {
@@ -88,7 +97,7 @@ main > h6 {
     font-variation-settings:
       'CASL' 0.5,
       'MONO' 0,
-      'slnt' -10;
+      'slnt' -5;
     font-weight: var(--font-weight-bold);
   }
 }
@@ -105,7 +114,7 @@ main > h6 {
     font-variation-settings:
       'CASL' 0.75,
       'MONO' 1,
-      'slnt' -10;
+      'slnt' -5;
     font-weight: var(--font-weight-bold);
   }
 }
@@ -114,22 +123,34 @@ a,
 a:focus,
 a:active,
 a:visited {
+  outline: none;
   font-family: var(--font-family-sans);
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
+  padding: var(--spacing-text);
   text-decoration: none;
-  color: blue;
+  color: var(--color-3);
+  border: 2px solid var(--background-1)
 }
 
-a:hover {
-  color: magenta;
+a:hover,
+a:focus {
+  /* TODO border box?? focus is weird */
+  color: var(--color-2);
+  background: var(--background-2);
   animation: hover 0.1s forwards ease;
+}
+
+a:focus {
+  border: 2px solid var(--color-2);
+  box-sizing: content-box;
 }
 
 code {
   padding: var(--spacing-text);
+  /* TODO variableize border radius */
   border-radius: 5px;
-  background: aliceblue;
+  background: var(--background-2);
   font-size: var(--text-md);
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-base);
@@ -143,7 +164,7 @@ a:focus > code {
   animation: codehover 0.1s forwards ease;
 }
 
-/* hover animation looks weird. */
+/* hover animation looks weird. - should really get its own hover… */
 em {
   font-variation-settings:
     'CASL' 0.5,
