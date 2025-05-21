@@ -30,25 +30,23 @@ body {
   width: 500px;
 }
 
-header {
-  background-color: darkseagreen;
-}
-
 main {
   background-color: cadetblue;
 }
 
-h1 {
-  font-family: 'Recursive', sans-serif;
-  font-optical-sizing: auto;
-  font-size: 2rem;
-  font-weight: 500;
-  font-variation-settings:
-    'CASL' 0,
-    'MONO' 0;
-}
-
-p {
+/* hmmm….. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+label,
+input,
+textarea {
   font-family: 'Recursive', sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -56,4 +54,29 @@ p {
   font-variation-settings:
     'CASL' 0,
     'MONO' 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  /*  font-size: 1rem;*/
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: blue;
+  transition: all 0.1s ease;
+}
+
+a:hover {
+  font-weight: 700;
+  font-variation-settings:
+    'CASL' 1,
+    'slnt' -5;
 }
