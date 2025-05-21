@@ -2,7 +2,7 @@ function HeaderLink() {
   return (
     <div>
       <a href="https:/nirmal.meka.la">
-        <span>HeaderLink</span>
+        <span>nirmal mekala</span>
       </a>
     </div>
   );
