@@ -1,6 +1,5 @@
 header {
-  padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
-  margin-bottom: 3rem;
+  padding: 1.5rem var(--spacing-container-x) 0 var(--spacing-container-x);
 }
 
 /* todo needs its own animation */
@@ -8,8 +7,13 @@ header {
 header a,
 header a:hover,
 header a:focus {
-  outline: none;
-  background-color: transparent;
-  font-size: var(--text-xxl);
+  font-size: var(--text-xl);
   padding: 0;
+  font-variation-settings:
+    'CASL' 0,
+    'MONO' 1;
+}
+
+header a::before {
+  background: var(--background-1);
 }

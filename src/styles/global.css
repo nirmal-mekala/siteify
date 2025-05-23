@@ -8,7 +8,16 @@ body {
 
 #page {
   width: 100%;
-  padding: 4rem 0 0 0;
+  padding: 0 0 0 0;
+}
+
+#page > hr,
+main > hr {
+  margin: 2rem var(--spacing-container-x) 2rem var(--spacing-container-x);
+  height: 0;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-color: var(--color-3);
 }
 
 main {
@@ -19,7 +28,7 @@ h1 {
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
   color: var(--color-2);
-  margin-bottom: var(--text-margin-bottom);
+  margin: 2rem 0 2rem 0;
   font-variation-settings:
     'CASL' 0,
     'MONO' 0;
@@ -30,7 +39,7 @@ h2 {
   color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--text-margin-bottom);
+  margin: 2rem 0 2rem 0;
   font-variation-settings:
     'CASL' 0,
     'MONO' 0;
@@ -41,7 +50,8 @@ h3 {
   color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--text-margin-bottom);
+  /* variablize this */
+  margin: 2rem 0 2rem 0;
   font-variation-settings:
     'CASL' 0,
     'MONO' 0;
@@ -54,7 +64,7 @@ h6 {
   color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
-  margin-bottom: var(--text-margin-bottom);
+  margin: 2rem 0 2rem 0;
   font-variation-settings:
     'CASL' 0,
     'MONO' 0;
@@ -65,9 +75,10 @@ p {
   color: var(--color-1);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-base);
-  margin-bottom: var(--text-margin-bottom);
+  /* TODO variablize this */
+  margin: 1rem 0 1rem 0;
   font-variation-settings:
-    'CASL' 0.4,
+    'CASL' 0,
     'MONO' 1;
 }
 
@@ -123,33 +134,64 @@ a,
 a:focus,
 a:active,
 a:visited {
-  outline: none;
+  position: relative;
   font-family: var(--font-family-sans);
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
-  padding: var(--spacing-text);
   text-decoration: none;
   color: var(--color-3);
-  border: 2px solid var(--background-1);
+}
+
+a::after {
+  content: '';
+  background-color: var(--background-2);
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 0px;
+  z-index: -2;
+  transition:
+    bottom 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+a::before {
+  content: '';
+  background-color: var(--color-3);
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  transition:
+    bottom 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+a:hover::before {
+  bottom: 0px;
+}
+
+a:hover::after {
+  bottom: 0px;
+  height: 100%;
 }
 
 a:hover,
 a:focus {
-  /* TODO border box?? focus is weird */
   color: var(--color-2);
-  background: var(--background-2);
-  animation: hover 0.1s forwards ease;
-}
-
-a:focus {
-  border: 2px solid var(--color-2);
-  box-sizing: content-box;
+  /* variablize animation */
+  animation: hover 0.3s forwards ease-in-out;
+  /*
+  color: var(--color-2);
+  */
 }
 
 code {
-  padding: var(--spacing-text);
+  padding: 0 var(--spacing-text) 0 var(--spacing-text);
   /* TODO variableize border radius */
-  border-radius: 5px;
   background: var(--background-2);
   font-size: var(--text-md);
   font-family: var(--font-family-mono);
