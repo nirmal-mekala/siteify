@@ -17,3 +17,24 @@ header a:focus {
 header a::before {
   background: var(--background-1);
 }
+header a::after {
+  background: var(--background-1);
+}
+
+header > div > a {
+  position: relative;
+}
+
+header > div > a:hover > span.la {
+  transform: translateX(15px);
+}
+
+header span {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+header span.la {
+  position: absolute;
+  left: 186px;
+}

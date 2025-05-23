@@ -18,7 +18,11 @@ function HeaderLink() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <span>{isHovered ? 'nirmal.meka.la' : 'nirmal mekala'}</span>
+        <span>nirmal</span>
+        <span>{isHovered ? '.' : '\u00A0'}</span>
+        <span>meka</span>
+        {isHovered && <span>.</span>}
+        <span className="la">la</span>
       </a>
     </div>
   );
