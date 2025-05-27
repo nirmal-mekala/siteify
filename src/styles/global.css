@@ -4,6 +4,15 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background: var(--background-1);
+  /* TODO think about multiple font-family vars… think about this… */
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-base);
+  color: var(--color-1);
+  font-size: var(--text-md);
+  font-variation-settings:
+    'CASL' 0,
+    'MONO' 1,
+    'CRSV' 0;
 }
 
 #page {
@@ -23,44 +32,56 @@ main > hr {
 main {
 }
 
-h1 {
-  font-size: var(--text-xxl);
-  font-family: var(--font-family-sans);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: var(--font-weight-bold);
   color: var(--color-2);
   margin: 2rem 0 2rem 0;
-  font-variation-settings:
-    'CASL' 0,
-    'MONO' 0;
+}
+
+h1 {
+  font-size: var(--text-xxl);
+  /*  font-family: var(--font-family-sans);*/
+  /*  font-weight: var(--font-weight-bold);*/
+  /*  margin: 2rem 0 2rem 0; */
+  /*  font-variation-settings: 'CASL' 0;*/
+  /*    'MONO' 0;*/
 }
 
 h2 {
   font-size: var(--text-xl);
-  color: var(--color-2);
-  font-family: var(--font-family-sans);
+  /*  color: var(--color-2);
+    font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
   margin: 2rem 0 2rem 0;
   font-variation-settings:
     'CASL' 0,
-    'MONO' 0;
+    'MONO' 0;*/
 }
 
 h3 {
   font-size: var(--text-lg);
+
+  /*
   color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
-  /* variablize this */
-  margin: 2rem 0 2rem 0;
   font-variation-settings:
     'CASL' 0,
-    'MONO' 0;
+    'MONO' 0;*/
+  /* variablize this */
+  /*  margin: 2rem 0 2rem 0;*/
 }
 
 h4,
 h5,
 h6 {
   font-size: var(--text-md);
+  /*
   color: var(--color-2);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-bold);
@@ -68,18 +89,16 @@ h6 {
   font-variation-settings:
     'CASL' 0,
     'MONO' 0;
+    */
 }
 
 p {
   font-size: var(--text-md);
-  color: var(--color-1);
+  /*  color: var(--color-1);*/
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-base);
   /* TODO variablize this */
   margin: 1rem 0 1rem 0;
-  font-variation-settings:
-    'CASL' 0,
-    'MONO' 1;
 }
 
 /* blockquotes? code blocks? */
@@ -94,6 +113,25 @@ main > small {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
 }
 
+blockquote {
+  background: var(--background-2);
+  padding: 0.5rem var(--spacing-container-x) 0.5rem var(--spacing-container-x);
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+ol,
+ul {
+  padding-inline-start: var(--spacing-container-x);
+}
+
+ol,
+ul,
+li {
+  margin: 1rem 0 1rem 0;
+}
+
+/* TODO link hover needs some love… */
+
 /* TODO variable-ize variation settings */
 
 @keyframes hover {
@@ -101,14 +139,14 @@ main > small {
     font-variation-settings:
       'CASL' 0,
       'MONO' 1,
-      'slnt' 0;
+      'CRSV' 0;
     font-weight: var(--font-weight-base);
   }
   100% {
     font-variation-settings:
       'CASL' 0.5,
       'MONO' 1,
-      'slnt' -2;
+      'CRSV' 0;
     font-weight: var(--font-weight-bold);
   }
 }
@@ -134,14 +172,20 @@ a,
 a:focus,
 a:active,
 a:visited {
+  /* TODO variablize… */
+  background: linear-gradient(to right, #ffc0cb, #dda0dd);
   position: relative;
   font-family: var(--font-family-sans);
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
   text-decoration: none;
+  background-clip: text;
+  /* bring back… */
   color: var(--color-3);
+  /*  color: transparent;*/
 }
 
+/* used for anchor tag background effect */
 a::after {
   content: '';
   background-color: var(--background-2);
@@ -156,9 +200,11 @@ a::after {
     height 0.3s ease-in-out;
 }
 
+/* used for anchor tag underline effect */
 a::before {
   content: '';
   background-color: var(--color-3);
+  /*background: linear-gradient(to right, #ff69b4, #8a2be2);*/
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -181,7 +227,6 @@ a:hover::after {
 
 a:hover,
 a:focus {
-  color: var(--color-2);
   /* variablize animation */
   animation: hover 0.3s forwards ease-in-out;
   /*
@@ -191,7 +236,7 @@ a:focus {
 
 code {
   padding: 0 var(--spacing-text) 0 var(--spacing-text);
-  /* TODO variableize border radius */
+  /* TODO variableize border radius (?) */
   background: var(--background-2);
   font-size: var(--text-md);
   font-family: var(--font-family-mono);
@@ -210,7 +255,7 @@ a:focus > code {
 em {
   font-variation-settings:
     'CASL' 0.5,
-    'MONO' 0,
+    'MONO' 1,
     'slnt' -10,
     'CRSV' 1;
 }

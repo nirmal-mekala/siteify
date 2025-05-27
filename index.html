@@ -8,13 +8,115 @@
       href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Preact + TS</title>
   </head>
-  <body class="light">
+  <body class="dark">
     <div id="page">
       <main>
+        <h1>Heading Level 1</h1>
+        <h2>Heading Level 2</h2>
+        <h3>Heading Level 3</h3>
+
+        <p>
+          This is a normal paragraph with <strong>bold text</strong>,
+          <em>italic text</em>, and <strong><em>bold italic text</em></strong
+          >.
+        </p>
+
+        <p>
+          Here is a <a href="#">simple link</a>, and a
+          <strong><a href="#">bold link</a></strong
+          >, and an <em><a href="#">italic link</a></em
+          >.
+        </p>
+
+        <p>
+          Even more complex:
+          <strong
+            ><em><a href="#">bold italic link</a></em></strong
+          >
+          nested correctly.
+        </p>
+
+        <p>
+          This is a paragraph with <code>inline code</code>, and
+          <strong><code>bold inline code</code></strong
+          >, and <em><code>italic inline code</code></em
+          >.
+        </p>
+
+        <p>
+          You can also have <code><a href="#">a link inside code</a></code> or
+          <a href="#"><code>code inside a link</code></a
+          >.
+        </p>
+
+        <blockquote>
+          <p>
+            This is a blockquote. It can contain <strong>bold</strong>,
+            <em>italic</em>, and even <code>inline code</code>.
+          </p>
+          <p>
+            You can nest
+            <strong
+              ><em><a href="#">links inside emphasis</a></em></strong
+            >
+            here as well.
+          </p>
+        </blockquote>
+
+        <ul>
+          <li>
+            Unordered list item
+            <ul>
+              <li><strong>Bold list item</strong></li>
+              <li><em>Italic list item</em></li>
+              <li><code>Code in list</code></li>
+              <li><a href="#">Link in list</a></li>
+              <li>
+                <strong
+                  ><em><a href="#">Bold Italic Link in list</a></em></strong
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ol>
+          <li>
+            Ordered list item
+            <ol>
+              <li><strong>Bold list item</strong></li>
+              <li><em>Italic list item</em></li>
+              <li><code>Code in list</code></li>
+              <li><a href="#">Link in list</a></li>
+            </ol>
+          </li>
+        </ol>
+
+        <pre><code class="language-js">// This is a code block
+function helloWorld() {
+  console.log("Hello, world!");
+}
+
+// <strong>Bold inside code block?</strong>
+</code></pre>
+
+        <p>This paragraph ends with a horizontal rule:</p>
+        <hr />
+
+        <p>Emoji test: 👍 😀 ❤️</p>
+
         <h1>heres an h1 header</h1>
         <p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefgh</p>
         <p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefgh</p>
