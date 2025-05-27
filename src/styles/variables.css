@@ -55,6 +55,5 @@ body.papercolor {
     --text-sm: 0.75rem;
     --text-xs: 0.5rem;
     --spacing-container-x: 2rem;
-    /* TODO is rem right for spacing  */
   }
 }
