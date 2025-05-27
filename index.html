@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <script>
@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Preact + TS</title>
   </head>
-  <body class="dark">
+  <body class="light">
     <div id="page">
       <main>
         <h1>Heading Level 1</h1>
@@ -32,7 +32,6 @@
           <em>italic text</em>, and <strong><em>bold italic text</em></strong
           >.
         </p>
-
         <p>
           Here is a <a href="#">simple link</a>, and a
           <strong><a href="#">bold link</a></strong
@@ -104,13 +103,51 @@
           </li>
         </ol>
 
-        <pre><code class="language-js">// This is a code block
-function helloWorld() {
-  console.log("Hello, world!");
+        <pre><code class="language-js">
+// This is a comment, it will be highlighted as such
+let number = 10; // Variable declaration
+
+const person = {
+    name: "John Doe",  // String literal
+    age: 30,           // Number literal
+    greet() {          // Method definition
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+};
+
+// Function expression with an arrow function
+const add = (a, b) => a + b;
+
+// Conditional statement
+if (number &gt; 5) {
+    console.log("Number is greater than 5");
+} else {
+    console.log("Number is 5 or less");
 }
 
-// <strong>Bold inside code block?</strong>
-</code></pre>
+// Looping through an array
+const numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i &lt; numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// Asynchronous operation
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Regular Expression
+const regex = /\d+/g;
+let result = "123 456 789".match(regex);
+console.log(result);
+}
+        </code></pre>
 
         <p>This paragraph ends with a horizontal rule:</p>
         <hr />

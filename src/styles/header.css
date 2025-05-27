@@ -2,16 +2,11 @@ header {
   padding: 1.5rem var(--spacing-container-x) 0 var(--spacing-container-x);
 }
 
-/* todo needs its own animation */
-
 header a,
 header a:hover,
 header a:focus {
   font-size: var(--text-xl);
   padding: 0;
-  font-variation-settings:
-    'CASL' 0,
-    'MONO' 1;
 }
 
 header a::before {
@@ -26,7 +21,7 @@ header > div > a {
 }
 
 header > div > a:hover > span.la {
-  transform: translateX(15px);
+  transform: translateX(9px);
 }
 
 header span {
@@ -36,5 +31,5 @@ header span {
 
 header span.la {
   position: absolute;
-  left: 186px;
+  left: 172px;
 }

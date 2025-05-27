@@ -8,15 +8,11 @@ body {
   font-weight: var(--font-weight-base);
   color: var(--color-1);
   font-size: var(--text-md);
-  font-variation-settings:
-    'CASL' 0,
-    'MONO' 1,
-    'CRSV' 0;
 }
 
 #page {
   width: 100%;
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 #page > hr,
@@ -97,35 +93,28 @@ li {
 }
 
 @keyframes hover {
-  0% {
-    font-variation-settings:
-      'CASL' 0,
-      'MONO' 1,
-      'CRSV' 0;
-    font-weight: var(--font-weight-base);
-  }
   100% {
-    font-variation-settings:
-      'CASL' 0.5,
-      'MONO' 1,
-      'CRSV' 0;
+    font-variation-settings: var(--font-variation-casual),
+      var(--font-variation-slant-small);
     font-weight: var(--font-weight-bold);
   }
 }
 
 @keyframes codehover {
   0% {
-    font-variation-settings:
-      'CASL' 0,
-      'MONO' 1,
-      'slnt' 0;
-    font-weight: var(--font-weight-base);
+    font-variation-settings: var(--font-variation-mono);
   }
   100% {
-    font-variation-settings:
-      'CASL' 0.75,
-      'MONO' 1,
-      'slnt' -2;
+    font-variation-settings: var(--font-variation-casual),
+      var(--font-variation-mono), var(--font-variation-slant-small);
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+@keyframes italichover {
+  100% {
+    font-variation-settings: var(--font-variation-casual),
+      var(--font-variation-slant-full), var(--font-variation-cursive);
     font-weight: var(--font-weight-bold);
   }
 }
@@ -134,13 +123,13 @@ a,
 a:focus,
 a:active,
 a:visited {
-  background: linear-gradient(to right, #ffc0cb, #dda0dd);
+  /*  background: linear-gradient(to right, #ffc0cb, #dda0dd);*/
   position: relative;
   font-family: var(--font-family-sans);
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
   text-decoration: none;
-  background-clip: text;
+  /*  background-clip: text;*/
   color: var(--color-3);
 }
 
@@ -194,22 +183,26 @@ code {
   font-size: var(--text-md);
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-base);
-  font-variation-settings:
-    'CASL' 0,
-    'MONO' 1;
+  font-variation-settings: var(--font-variation-mono);
 }
 
+code > a:hover,
+code > a:focus,
 a:hover > code,
 a:focus > code {
   animation: codehover 0.1s forwards ease;
 }
 
 em {
-  font-variation-settings:
-    'CASL' 0.5,
-    'MONO' 1,
-    'slnt' -10,
-    'CRSV' 1;
+  font-variation-settings: var(--font-variation-slant-full),
+    var(--font-variation-cursive);
+}
+
+a:hover > em,
+a:focus > em,
+em > a:hover,
+em > a:focus {
+  animation: italichover 0.1s forwards ease;
 }
 
 strong,
