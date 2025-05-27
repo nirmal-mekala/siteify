@@ -21,7 +21,7 @@ header > div > a {
 }
 
 header > div > a:hover > span.la {
-  transform: translateX(9px);
+  transform: translateX(10px);
 }
 
 header span {

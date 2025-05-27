@@ -1,6 +1,6 @@
 .hljs {
   background: var(--background-2);
-  color: #ddd;
+  color: rgb(78, 93, 115);
 }
 
 .hljs-tag,
@@ -10,7 +10,7 @@
 .hljs-strong,
 .hljs-number,
 .hljs-name {
-  color: #f92672;
+  color: rgb(67, 129, 56);
 }
 
 .hljs-attribute,
@@ -36,19 +36,21 @@
 .hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
-  color: #a6e22e;
+  color: rgb(166, 86, 156);
 }
 
 .hljs-title.class_,
 .hljs-class .hljs-title {
-  color: white;
+  color: rgb(7, 121, 197);
 }
 
 .hljs-comment,
 .hljs-quote,
 .hljs-deletion,
 .hljs-meta {
-  color: #75715e;
+  color: rgb(115, 131, 154);
+  font-variation-settings: var(--font-variation-mono),
+    var(--font-variation-slant-full), var(--font-variation-cursive);
 }
 
 .hljs-keyword,

@@ -100,7 +100,7 @@ li {
   }
 }
 
-@keyframes codehover {
+@keyframes code-hover {
   0% {
     font-variation-settings: var(--font-variation-mono);
   }
@@ -111,7 +111,7 @@ li {
   }
 }
 
-@keyframes italichover {
+@keyframes italic-hover {
   100% {
     font-variation-settings: var(--font-variation-casual),
       var(--font-variation-slant-full), var(--font-variation-cursive);
@@ -144,8 +144,8 @@ a::after {
   height: 0px;
   z-index: -2;
   transition:
-    bottom 0.3s ease-in-out,
-    height 0.3s ease-in-out;
+    bottom var(--animation-time) var(--animation-style),
+    height var(--animation-time) var(--animation-style);
 }
 
 /* used for anchor tag underline effect */
@@ -159,8 +159,8 @@ a::before {
   height: 2px;
   z-index: -1;
   transition:
-    bottom 0.3s ease-in-out,
-    height 0.3s ease-in-out;
+    bottom var(--animation-time) var(--animation-style),
+    height var(--animation-time) var(--animation-style);
 }
 
 a:hover::before {
@@ -174,7 +174,7 @@ a:hover::after {
 
 a:hover,
 a:focus {
-  animation: hover 0.3s forwards ease-in-out;
+  animation: hover var(--animation-time) forwards var(--animation-style);
 }
 
 code {
@@ -190,7 +190,7 @@ code > a:hover,
 code > a:focus,
 a:hover > code,
 a:focus > code {
-  animation: codehover 0.1s forwards ease;
+  animation: code-hover var(--animation-time) forwards var(--animation-style);
 }
 
 em {
@@ -202,7 +202,7 @@ a:hover > em,
 a:focus > em,
 em > a:hover,
 em > a:focus {
-  animation: italichover 0.1s forwards ease;
+  animation: italic-hover var(--animation-time) forwards var(--animation-style);
 }
 
 strong,
