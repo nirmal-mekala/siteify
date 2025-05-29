@@ -22,7 +22,7 @@ function HeaderLink() {
         <span>{isHovered ? '.' : '\u00A0'}</span>
         <span>meka</span>
         {isHovered && <span>.</span>}
-        <span className="la">la</span>
+        <span>la</span>
       </a>
     </div>
   );

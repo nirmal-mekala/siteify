@@ -64,7 +64,14 @@
   font-weight: var(--font-weight-bold);
 }
 
+pre code.hljs::-webkit-scrollbar {
+  display: none;
+}
+
 pre code.hljs {
   padding-right: var(--spacing-container-x);
   padding-left: var(--spacing-container-x);
+  border: var(--border-width) solid var(--color-3);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

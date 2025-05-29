@@ -10,26 +10,18 @@ header a:focus {
 }
 
 header a::before {
-  background: var(--background-1);
+  display: none;
 }
+
 header a::after {
-  background: var(--background-1);
+  bottom: 0px;
 }
 
 header > div > a {
   position: relative;
 }
 
-header > div > a:hover > span.la {
-  transform: translateX(10px);
-}
-
 header span {
   display: inline-block;
-  transition: transform 0.3s ease-in-out;
-}
-
-header span.la {
-  position: absolute;
-  left: 172px;
+  transition: transform var(--animation-time) var(--animation-style);
 }
