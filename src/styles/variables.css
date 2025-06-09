@@ -22,61 +22,78 @@
   --border-width: 1px;
 }
 
-body {
-  --background-1: inherit;
-  --background-2: inherit;
-  --background-3: inherit;
-  --background-4: inherit;
-  --color-1: inherit;
-  --color-2: inherit;
-  --color-3: inherit;
-}
-
 body.light {
-  --background-1: gainsboro;
-  --background-2: hsl(146, 50%, 95%);
-  --background-3: hsl(146, 50%, 90%);
-  --color-1: black;
-  --color-2: purple;
-  --color-3: hsl(146, 50%, 36%);
+  --background-body: hsl(210, 30%, 92%);
+  --background-link-hover: transparent;
+  --background-text-block: hsl(210, 30%, 85%);
+  --color-text-primary: hsl(210, 10%, 20%);
+  --color-text-header: hsl(230, 40%, 30%);
+  --color-text-link: hsl(333, 100%, 45%);
+  --color-border: hsl(210, 30%, 65%);
+  --code-theme-color-1: hsl(210, 10%, 20%);
+  --code-theme-color-2: hsl(230, 40%, 30%);
+  --code-theme-color-3: hsl(333, 100%, 45%);
+  --code-theme-color-4: hsl(333, 100%, 30%);
+  --code-theme-color-5: hsl(230, 40%, 20%);
+  --code-theme-color-comment: hsl(210, 10%, 50%);
 }
 
 body.funk {
-  --background-1: hsl(42, 100%, 92%);
-  --background-2: rgb(218, 225, 94);
-  --background-3: rgb(192, 176, 255);
-  --color-1: rgb(53, 53, 53);
-  --color-2: rgb(53, 53, 53);
-  --color-3: rgb(53, 53, 53);
+  --background-body: hsl(42, 100%, 92%);
+  --background-link-hover: rgb(218, 225, 94);
+  --background-text-block: rgb(192, 176, 255);
+  --color-text-primary: rgb(53, 53, 53);
+  --color-text-header: rgb(53, 53, 53);
+  --color-text-link: rgb(53, 53, 53);
+  --color-border: rgb(53, 53, 53);
+}
+/*
+ * TODO - consider "color" for text vs "background"
+ */
+
+body.rgb {
+  --background-body: white;
+  --background-page: transparent;
+  --background-link-hover: rgb(0, 255, 0);
+  --background-text-block: white;
+  --color-text-primary: black;
+  --color-text-header: blue;
+  --color-text-link: black;
+  --color-border: red;
 }
 
 body.dark {
-  --background-1: #111111;
-  --background-2: #222222;
-  --background-3: #333333;
-  --color-1: #d2d2d2;
-  --color-2: #5faf5f;
-  --color-3: #af87d7;
+  --background-body: #111111;
+  --background-page: transparent;
+  --background-link-hover: #222222;
+  --background-text-block: #333333;
+  --color-text-primary: #d2d2d2;
+  --color-text-header: #5faf5f;
+  --color-text-link: #af87d7;
+  --color-border: #5faf5f;
 }
 
 body.fancy {
-  --background-1: linear-gradient(135deg, #111111 0%, #800080 100%);
-  --background-2: #222222;
-  --background-3: #333333;
-  --color-1: whitesmoke;
-  --color-2: whitesmoke;
-  --color-3: whitesmoke;
+  --background-body: black;
+  --background-page: transparent;
+  --background-link-hover: #222222;
+  --background-text-block: #333333;
+  --color-text-primary: whitesmoke;
+  --color-text-header: whitesmoke;
+  --color-text-link: whitesmoke;
+  --color-border: whitesmoke;
 }
 
 body.pattern {
-  --background-1: #dfdbe5
+  --background-body: #dfdbe5
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%239C92AC' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
-  --background-2: white;
-  --background-3: white;
-  --background-4: #dfdbe5;
-  --color-1: #111111;
-  --color-2: #111111;
-  --color-3: #111111;
+  --background-page: #dfdbe5;
+  --background-link-hover: white;
+  --background-text-block: white;
+  --color-text-primary: #111111;
+  --color-text-header: #111111;
+  --color-text-link: #111111;
+  --color-border: transparent;
 }
 
 @media screen and (min-width: 768px) {
