@@ -25,14 +25,17 @@
 body.light {
   --background-body: hsl(210, 30%, 92%);
   --background-link-hover: transparent;
-  --background-text-block: hsl(210, 30%, 85%);
+  --background-text-alt: hsl(210, 30%, 85%);
   --color-text-primary: hsl(210, 10%, 20%);
   --color-text-header: hsl(230, 40%, 30%);
   --color-text-link: hsl(333, 100%, 45%);
   --color-border: hsl(210, 30%, 65%);
-  --code-theme-color-1: hsl(210, 10%, 20%);
-  --code-theme-color-2: hsl(230, 40%, 30%);
-  --code-theme-color-3: hsl(333, 100%, 45%);
+  /* TODO this is a good reason to migrate to primary, secondary, tertiary… */
+  --code-border: var(--color-border);
+  --code-background: var(--background-text-alt);
+  --code-theme-color-1: var(--color-text-primary);
+  --code-theme-color-2: var(--color-text-header);
+  --code-theme-color-3: var(--color-text-link);
   --code-theme-color-4: hsl(333, 100%, 30%);
   --code-theme-color-5: hsl(230, 40%, 20%);
   --code-theme-color-comment: hsl(210, 10%, 50%);
@@ -41,21 +44,35 @@ body.light {
 body.funk {
   --background-body: hsl(42, 100%, 92%);
   --background-link-hover: rgb(218, 225, 94);
-  --background-text-block: rgb(192, 176, 255);
+  --background-text-alt: rgb(192, 176, 255);
   --color-text-primary: rgb(53, 53, 53);
   --color-text-header: rgb(53, 53, 53);
   --color-text-link: rgb(53, 53, 53);
   --color-border: rgb(53, 53, 53);
+  --code-background: #282828;
+  --code-border: transparent;
+  --code-theme-color-1: #ebdbb2;
+  --code-theme-color-2: #b8bb26;
+  --code-theme-color-3: #fabd2f;
+  --code-theme-color-4: #d3869b;
+  --code-theme-color-5: #fb4934;
+  --code-theme-color-comment: #928374;
 }
 /*
- * TODO - consider "color" for text vs "background"
+ * TODO implement light.funk etc.
+ * /
+
+
+/*
+ * TODO - consider "color" for text vs "background" - seems incnosistent because the backgrounds are also colors
+ *        rm "color entirely?"
  */
 
 body.rgb {
   --background-body: white;
   --background-page: transparent;
   --background-link-hover: rgb(0, 255, 0);
-  --background-text-block: white;
+  --background-text-alt: white;
   --color-text-primary: black;
   --color-text-header: blue;
   --color-text-link: black;
@@ -66,7 +83,7 @@ body.dark {
   --background-body: #111111;
   --background-page: transparent;
   --background-link-hover: #222222;
-  --background-text-block: #333333;
+  --background-text-alt: #333333;
   --color-text-primary: #d2d2d2;
   --color-text-header: #5faf5f;
   --color-text-link: #af87d7;
@@ -77,7 +94,7 @@ body.fancy {
   --background-body: black;
   --background-page: transparent;
   --background-link-hover: #222222;
-  --background-text-block: #333333;
+  --background-text-alt: #333333;
   --color-text-primary: whitesmoke;
   --color-text-header: whitesmoke;
   --color-text-link: whitesmoke;
@@ -89,7 +106,7 @@ body.pattern {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%239C92AC' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
   --background-page: #dfdbe5;
   --background-link-hover: white;
-  --background-text-block: white;
+  --background-text-alt: white;
   --color-text-primary: #111111;
   --color-text-header: #111111;
   --color-text-link: #111111;

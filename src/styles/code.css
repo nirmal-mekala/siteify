@@ -1,5 +1,5 @@
 .hljs {
-  background: var(--background-text-block);
+  background: var(--code-background);
   color: var(--code-theme-color-1);
 }
 
@@ -71,7 +71,7 @@ pre code.hljs::-webkit-scrollbar {
 pre code.hljs {
   padding-right: var(--spacing-container-x);
   padding-left: var(--spacing-container-x);
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--code-border);
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
