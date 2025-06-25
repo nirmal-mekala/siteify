@@ -81,6 +81,8 @@ blockquote {
   padding: 0.5rem var(--spacing-container-x) 0.5rem var(--spacing-container-x);
   margin: 0.5rem 0 0.5rem 0;
   border: var(--border-width) solid var(--color-border);
+  font-variation-settings: var(--font-variation-slant-full),
+    var(--font-variation-cursive);
 }
 
 ol,

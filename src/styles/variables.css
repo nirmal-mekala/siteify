@@ -41,12 +41,13 @@ body.light {
   --code-theme-color-comment: hsl(210, 10%, 50%);
 }
 
+/* gruvbox lt baby */
 body.funk {
   --background-body: hsl(42, 100%, 92%);
-  --background-link-hover: rgb(218, 225, 94);
-  --background-text-alt: rgb(192, 176, 255);
+  --background-link-hover: #b8bb26; /*rgb(218, 225, 94);*/
+  --background-text-alt: hsl(344, 47%, 80%); /*rgb(192, 176, 255);*/
   --color-text-primary: rgb(53, 53, 53);
-  --color-text-header: rgb(53, 53, 53);
+  --color-text-header: hsl(42, 95%, 40%);
   --color-text-link: rgb(53, 53, 53);
   --color-border: rgb(53, 53, 53);
   --code-background: #282828;
@@ -74,11 +75,20 @@ body.rgb {
   --background-link-hover: rgb(0, 255, 0);
   --background-text-alt: white;
   --color-text-primary: black;
-  --color-text-header: blue;
+  --color-text-header: rgb(0, 0, 255);
   --color-text-link: black;
-  --color-border: red;
+  --color-border: rgb(255, 0, 0);
+  --code-background: rgb(0, 0, 255);
+  --code-border: transparent;
+  --code-theme-color-1: white;
+  --code-theme-color-2: white;
+  --code-theme-color-3: white;
+  --code-theme-color-4: white;
+  --code-theme-color-5: white;
+  --code-theme-color-comment: white;
 }
 
+/*
 body.dark {
   --background-body: #111111;
   --background-page: transparent;
@@ -88,6 +98,24 @@ body.dark {
   --color-text-header: #5faf5f;
   --color-text-link: #af87d7;
   --color-border: #5faf5f;
+}
+*/
+body.dark {
+  --background-body: rgb(42, 42, 42);
+  --background-link-hover: rgb(42, 42, 42);
+  --background-text-alt: rgb(53, 53, 53);
+  --color-text-primary: rgb(234, 234, 234);
+  --color-text-header: rgb(165, 184, 127);
+  --color-text-link: rgb(199, 124, 159);
+  --color-border: rgb(53, 53, 53);
+  --code-background: rgb(42, 42, 42);
+  --code-border: transparent;
+  --code-theme-color-1: rgb(234, 234, 234);
+  --code-theme-color-2: rgb(214, 176, 101);
+  --code-theme-color-3: rgb(165, 184, 127);
+  --code-theme-color-4: rgb(199, 124, 159);
+  --code-theme-color-5: rgb(232, 131, 128);
+  --code-theme-color-comment: rgb(147, 147, 147);
 }
 
 body.fancy {

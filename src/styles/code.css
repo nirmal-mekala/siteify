@@ -9,7 +9,8 @@
 .hljs-literal,
 .hljs-strong,
 .hljs-number,
-.hljs-name {
+.hljs-name,
+.hljs-tag .hljs-name {
   color: var(--code-theme-color-2);
 }
 
