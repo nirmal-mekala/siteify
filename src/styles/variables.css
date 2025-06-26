@@ -88,6 +88,29 @@ body.rgb {
   --code-theme-color-comment: white;
 }
 
+body.fancy {
+  --background-body: black;
+  --background-page: transparent;
+  --background-link-hover: rgb(0, 255, 0); /* same to preserve highlight */
+  --background-text-alt: black;
+  --color-text-primary: white;
+  --color-text-header: rgb(
+    100,
+    150,
+    255
+  ); /* softened blue for dark background */
+  --color-text-link: white;
+  --color-border: rgb(255, 100, 100); /* lighter red for visibility on dark */
+  --code-background: rgb(30, 30, 60); /* dark blue-ish background */
+  --code-border: rgb(80, 80, 120); /* subtle border for code */
+  --code-theme-color-1: #ffd700; /* gold */
+  --code-theme-color-2: #7fffd4; /* aquamarine */
+  --code-theme-color-3: #adff2f; /* greenyellow */
+  --code-theme-color-4: #ff69b4; /* hot pink */
+  --code-theme-color-5: #87ceeb; /* skyblue */
+  --code-theme-color-comment: #aaaaaa; /* light gray for comments */
+}
+
 /*
 body.dark {
   --background-body: #111111;
@@ -118,9 +141,16 @@ body.dark {
   --code-theme-color-comment: rgb(147, 147, 147);
 }
 
+/*
 body.fancy {
-  --background-body: black;
-  --background-page: transparent;
+  --background-body: linear-gradient(
+    107.75deg,
+    #3c0a49 -11.51%,
+    #4d1162 36.98%,
+    #661d6f 67.25%,
+    #7f145d 102.77%
+  );
+  --background-page: rgb(0, 0, 0, 0.2);
   --background-link-hover: #222222;
   --background-text-alt: #333333;
   --color-text-primary: whitesmoke;
@@ -128,16 +158,17 @@ body.fancy {
   --color-text-link: whitesmoke;
   --color-border: whitesmoke;
 }
+*/
 
 body.pattern {
-  --background-body: #dfdbe5
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%239C92AC' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
-  --background-page: #dfdbe5;
+  --background-body: #004b23
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cg fill='%23006400' fill-opacity='0.95'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' opacity='.5'%3E%3C/path%3E%3Cpath d='M15 15h50l-5 5H20v40l-5 5V15zm0 50h50V15L80 0v80H0l15-15zm32.07-32.07l3.54-3.54A15 15 0 0 1 29.4 50.6l3.53-3.53a10 10 0 1 0 14.14-14.14zM32.93 47.07a10 10 0 1 1 14.14-14.14L32.93 47.07z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  --background-page: rgb(0, 0, 0, 0.4);
   --background-link-hover: white;
-  --background-text-alt: white;
-  --color-text-primary: #111111;
-  --color-text-header: #111111;
-  --color-text-link: #111111;
+  --background-text-alt: black;
+  --color-text-primary: grey;
+  --color-text-header: grey;
+  --color-text-link: grey;
   --color-border: transparent;
 }
 
