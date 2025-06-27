@@ -73,7 +73,7 @@ p {
   font-size: var(--text-md);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-base);
-  margin: 1rem 0 1rem 0;
+  margin: var(--text-margin-y) 0 var(--text-margin-y) 0;
 }
 
 /* blockquotes? code blocks? */

@@ -11,7 +11,7 @@
   --font-family-mono: 'Recursive', monospace;
   --font-weight-base: 500;
   --font-weight-bold: 800;
-  --text-margin-bottom: 0.5rem;
+  --text-margin-y: 1rem;
   --font-variation-slant-small: 'slnt' -2;
   --font-variation-slant-full: 'slnt' -10;
   --font-variation-mono: 'MONO' 1;
@@ -81,10 +81,6 @@ body.dark {
   --code-theme-color-5: var(--color-tomato-200);
   --code-theme-color-comment: var(--color-grey-500);
 }
-/*
- * TODO implement light.funk etc.
- * /
-
 
 /*
  * TODO - consider "color" for text vs "background" - seems incnosistent because the backgrounds are also colors
