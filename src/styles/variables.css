@@ -22,42 +22,63 @@
   --border-width: 1px;
 }
 
+/* gruvbox lt baby */
 body.light {
-  --background-body: hsl(210, 30%, 92%);
-  --background-link-hover: transparent;
-  --background-text-alt: hsl(210, 30%, 85%);
-  --color-text-primary: hsl(210, 10%, 20%);
-  --color-text-header: hsl(230, 40%, 30%);
-  --color-text-link: hsl(333, 100%, 45%);
-  --color-border: hsl(210, 30%, 65%);
-  /* TODO this is a good reason to migrate to primary, secondary, tertiary… */
-  --code-border: var(--color-border);
-  --code-background: var(--background-text-alt);
-  --code-theme-color-1: var(--color-text-primary);
-  --code-theme-color-2: var(--color-text-header);
-  --code-theme-color-3: var(--color-text-link);
-  --code-theme-color-4: hsl(333, 100%, 30%);
-  --code-theme-color-5: hsl(230, 40%, 20%);
-  --code-theme-color-comment: hsl(210, 10%, 50%);
+  --color-dark-900: hsl(0, 0%, 16%);
+  --color-dark-800: hsl(0, 0%, 21%);
+  --color-mauve-500: hsl(344, 47%, 68%);
+  --color-mauve-100: hsl(344, 47%, 80%);
+  --color-chartreuse-500: hsl(61, 66%, 44%);
+  --color-chartreuse-300: hsl(61, 66%, 70%);
+  --color-sand-900: hsl(30, 12%, 51%);
+  --color-sand-200: hsl(43, 59%, 81%);
+  --color-sand-50: hsl(42, 100%, 92%);
+  --color-red-500: hsl(6, 96%, 59%);
+  --color-gold-700: hsl(42, 95%, 40%);
+  --color-gold-500: hsl(42, 95%, 58%);
+
+  --background-body: var(--color-sand-50);
+  --background-link-hover: var(--color-chartreuse-300);
+  --background-text-alt: var(--color-mauve-100);
+  --color-text-primary: var(--color-dark);
+  --color-text-header: var(--color-gold-700);
+  --color-text-link: var(--color-dark-800);
+  --color-border: var(--color-dark-800);
+  --code-background: var(--color-dark-900);
+  --code-border: transparent;
+  --code-theme-color-1: var(--color-sand-200);
+  --code-theme-color-2: var(--color-chartreuse-500);
+  --code-theme-color-3: var(--color-gold-500);
+  --code-theme-color-4: var(--color-mauve-500);
+  --code-theme-color-5: var(--color-red-500);
+  --code-theme-color-comment: var(--color-sand-900);
 }
 
-/* gruvbox lt baby */
-body.funk {
-  --background-body: hsl(42, 100%, 92%);
-  --background-link-hover: #b8bb26; /*rgb(218, 225, 94);*/
-  --background-text-alt: hsl(344, 47%, 80%); /*rgb(192, 176, 255);*/
-  --color-text-primary: rgb(53, 53, 53);
-  --color-text-header: hsl(42, 95%, 40%);
-  --color-text-link: rgb(53, 53, 53);
-  --color-border: rgb(53, 53, 53);
-  --code-background: #282828;
+body.dark {
+  --color-grey-900: hsl(0, 0%, 16%);
+  --color-grey-800: hsl(0, 0%, 21%);
+  --color-grey-500: hsl(0, 0%, 58%);
+  --color-grey-100: hsl(0, 0%, 92%);
+  --color-berry-300: hsl(332, 40%, 63%);
+  --color-sage-200: hsl(80, 29%, 61%);
+  --color-mustard-200: hsl(40, 58%, 62%);
+  --color-tomato-200: hsl(2, 69%, 71%);
+
+  --background-body: var(--color-grey-900);
+  --background-link-hover: var(--color-grey-900);
+  --background-text-alt: var(--color-grey-800);
+  --color-text-primary: var(--color-grey-100);
+  --color-text-header: var(--color-sage-200);
+  --color-text-link: var(--color-berry-300);
+  --color-border: var(--color-grey-800);
+  --code-background: var(--color-grey-900);
   --code-border: transparent;
-  --code-theme-color-1: #ebdbb2;
-  --code-theme-color-2: #b8bb26;
-  --code-theme-color-3: #fabd2f;
-  --code-theme-color-4: #d3869b;
-  --code-theme-color-5: #fb4934;
-  --code-theme-color-comment: #928374;
+  --code-theme-color-1: var(--color-grey-100);
+  --code-theme-color-2: var(--color-mustard-200);
+  --code-theme-color-3: var(--color-sage-200);
+  --code-theme-color-4: var(--color-berry-300);
+  --code-theme-color-5: var(--color-tomato-200);
+  --code-theme-color-comment: var(--color-grey-500);
 }
 /*
  * TODO implement light.funk etc.
@@ -69,107 +90,55 @@ body.funk {
  *        rm "color entirely?"
  */
 
-body.rgb {
-  --background-body: white;
+body.haxor-light {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-green: #00ff00;
+  --color-blue: #0000ff;
+  --color-red: #ff0000;
+
+  --background-body: var(--color-white);
   --background-page: transparent;
-  --background-link-hover: rgb(0, 255, 0);
-  --background-text-alt: white;
-  --color-text-primary: black;
-  --color-text-header: rgb(0, 0, 255);
-  --color-text-link: black;
-  --color-border: rgb(255, 0, 0);
-  --code-background: rgb(0, 0, 255);
+  --background-link-hover: var(--color-green);
+  --background-text-alt: var(--color-white);
+  --color-text-primary: var(--color-black);
+  --color-text-header: var(--color-blue);
+  --color-text-link: var(--color-black);
+  --color-border: var(--color-red);
+  --code-background: var(--color-blue);
   --code-border: transparent;
-  --code-theme-color-1: white;
-  --code-theme-color-2: white;
-  --code-theme-color-3: white;
-  --code-theme-color-4: white;
-  --code-theme-color-5: white;
-  --code-theme-color-comment: white;
+  --code-theme-color-1: var(--color-white);
+  --code-theme-color-2: var(--color-white);
+  --code-theme-color-3: var(--color-white);
+  --code-theme-color-4: var(--color-white);
+  --code-theme-color-5: var(--color-white);
+  --code-theme-color-comment: var(--color-white);
 }
 
-body.fancy {
-  --background-body: black;
-  --background-page: transparent;
-  --background-link-hover: rgb(0, 255, 0); /* same to preserve highlight */
-  --background-text-alt: black;
-  --color-text-primary: white;
-  --color-text-header: rgb(
-    100,
-    150,
-    255
-  ); /* softened blue for dark background */
-  --color-text-link: white;
-  --color-border: rgb(255, 100, 100); /* lighter red for visibility on dark */
-  --code-background: rgb(30, 30, 60); /* dark blue-ish background */
-  --code-border: rgb(80, 80, 120); /* subtle border for code */
-  --code-theme-color-1: #ffd700; /* gold */
-  --code-theme-color-2: #7fffd4; /* aquamarine */
-  --code-theme-color-3: #adff2f; /* greenyellow */
-  --code-theme-color-4: #ff69b4; /* hot pink */
-  --code-theme-color-5: #87ceeb; /* skyblue */
-  --code-theme-color-comment: #aaaaaa; /* light gray for comments */
-}
+body.haxor-dark {
+  --color-green-900: hsl(144, 100%, 3%);
+  --color-green-800: hsl(142, 100%, 6%);
+  --color-green-600: hsl(140, 100%, 15%);
+  --color-green-300: hsl(138, 100%, 30%);
+  --color-green-200: hsl(130, 100%, 42%);
+  --color-green-100: hsl(120, 100%, 50%);
+  --color-grey-100: hsl(0, 0%, 75%);
 
-/*
-body.dark {
-  --background-body: #111111;
+  --background-body: var(--color-green-800);
   --background-page: transparent;
-  --background-link-hover: #222222;
-  --background-text-alt: #333333;
-  --color-text-primary: #d2d2d2;
-  --color-text-header: #5faf5f;
-  --color-text-link: #af87d7;
-  --color-border: #5faf5f;
-}
-*/
-body.dark {
-  --background-body: rgb(42, 42, 42);
-  --background-link-hover: rgb(42, 42, 42);
-  --background-text-alt: rgb(53, 53, 53);
-  --color-text-primary: rgb(234, 234, 234);
-  --color-text-header: rgb(165, 184, 127);
-  --color-text-link: rgb(199, 124, 159);
-  --color-border: rgb(53, 53, 53);
-  --code-background: rgb(42, 42, 42);
+  --background-text-alt: var(--color-green-900);
+  --color-text-primary: var(--color-grey-100);
+  --color-text-header: var(--color-green-200);
+  --color-text-link: var(--color-green-100);
+  --color-border: var(--color-green-300);
+  --code-background: var(--color-green-900);
   --code-border: transparent;
-  --code-theme-color-1: rgb(234, 234, 234);
-  --code-theme-color-2: rgb(214, 176, 101);
-  --code-theme-color-3: rgb(165, 184, 127);
-  --code-theme-color-4: rgb(199, 124, 159);
-  --code-theme-color-5: rgb(232, 131, 128);
-  --code-theme-color-comment: rgb(147, 147, 147);
-}
-
-/*
-body.fancy {
-  --background-body: linear-gradient(
-    107.75deg,
-    #3c0a49 -11.51%,
-    #4d1162 36.98%,
-    #661d6f 67.25%,
-    #7f145d 102.77%
-  );
-  --background-page: rgb(0, 0, 0, 0.2);
-  --background-link-hover: #222222;
-  --background-text-alt: #333333;
-  --color-text-primary: whitesmoke;
-  --color-text-header: whitesmoke;
-  --color-text-link: whitesmoke;
-  --color-border: whitesmoke;
-}
-*/
-
-body.pattern {
-  --background-body: #004b23
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cg fill='%23006400' fill-opacity='0.95'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' opacity='.5'%3E%3C/path%3E%3Cpath d='M15 15h50l-5 5H20v40l-5 5V15zm0 50h50V15L80 0v80H0l15-15zm32.07-32.07l3.54-3.54A15 15 0 0 1 29.4 50.6l3.53-3.53a10 10 0 1 0 14.14-14.14zM32.93 47.07a10 10 0 1 1 14.14-14.14L32.93 47.07z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-  --background-page: rgb(0, 0, 0, 0.4);
-  --background-link-hover: white;
-  --background-text-alt: black;
-  --color-text-primary: grey;
-  --color-text-header: grey;
-  --color-text-link: grey;
-  --color-border: transparent;
+  --code-theme-color-1: var(--color-green-100);
+  --code-theme-color-2: var(--color-green-100);
+  --code-theme-color-3: var(--color-green-100);
+  --code-theme-color-4: var(--color-green-100);
+  --code-theme-color-5: var(--color-green-100);
+  --code-theme-color-comment: var(--color-green-100);
 }
 
 @media screen and (min-width: 768px) {

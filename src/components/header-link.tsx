@@ -21,10 +21,8 @@ function HeaderLink() {
     document.body.classList.remove(
       'light',
       'dark',
-      'fancy',
-      'funk',
-      'rgb',
-      'pattern',
+      'haxor-light',
+      'haxor-dark',
     );
     document.body.classList.add(theme);
   }, [theme]);
@@ -44,12 +42,10 @@ function HeaderLink() {
       </a>
       <div>
         <span style={{ marginRight: '0.5rem' }}>selected: {theme}</span>
-        <button onClick={themeUpdater('light')}>1</button>
-        <button onClick={themeUpdater('dark')}>2</button>
-        <button onClick={themeUpdater('fancy')}>3</button>
-        <button onClick={themeUpdater('funk')}>4</button>
-        <button onClick={themeUpdater('rgb')}>5</button>
-        <button onClick={themeUpdater('pattern')}>6</button>
+        <button onClick={themeUpdater('light')}>lt</button>
+        <button onClick={themeUpdater('dark')}>dk</button>
+        <button onClick={themeUpdater('haxor-light')}>haxor-lt</button>
+        <button onClick={themeUpdater('haxor-dark')}>haxor-dk</button>
       </div>
     </div>
   );
