@@ -214,6 +214,8 @@ code {
   border: var(--border-width) solid var(--color-border);
 }
 
+/* TODO fix body/page scroll mismatch (cant scroll on body)… */
+
 a > code {
   border: none;
 }
