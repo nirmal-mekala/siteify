@@ -71,8 +71,8 @@ function HeaderLink() {
     {
       left: !haxorMode,
       toggleMethod: toggleHaxorMode,
-      leftEmoji: '😎',
-      rightEmoji: '😵‍💫',
+      leftEmoji: '🙂',
+      rightEmoji: '🙃',
     },
   ];
 

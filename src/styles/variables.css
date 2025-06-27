@@ -25,6 +25,7 @@
 body.light {
   --color-dark-900: hsl(0, 0%, 16%);
   --color-dark-800: hsl(0, 0%, 21%);
+  --color-mauve-700: hsl(344, 47%, 30%);
   --color-mauve-500: hsl(344, 47%, 68%);
   --color-mauve-100: hsl(344, 47%, 80%);
   --color-chartreuse-700: hsl(61, 66%, 30%);
@@ -42,9 +43,9 @@ body.light {
   --background-body: var(--color-sand-50);
   --background-link-hover: var(--color-chartreuse-400);
   --background-text-alt: var(--color-mauve-100);
-  --color-text-primary: var(--color-dark);
-  --color-text-header: var(--color-chartreuse-700);
-  --color-text-link: var(--color-dark-800);
+  --color-text-primary: var(--color-dark-900);
+  --color-text-header: var(--color-mauve-700);
+  --color-text-link: var(--color-dark-900);
   --color-border: var(--color-dark-800);
   --toggle-icon-filter: none;
   --code-background: var(--color-dark-900);
