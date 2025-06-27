@@ -22,15 +22,16 @@
   --border-width: 1px;
 }
 
-/* gruvbox lt baby */
 body.light {
   --color-dark-900: hsl(0, 0%, 16%);
   --color-dark-800: hsl(0, 0%, 21%);
   --color-mauve-500: hsl(344, 47%, 68%);
   --color-mauve-100: hsl(344, 47%, 80%);
+  --color-chartreuse-700: hsl(61, 66%, 30%);
   --color-chartreuse-500: hsl(61, 66%, 44%);
   --color-chartreuse-400: hsl(61, 66%, 55%);
   --color-sand-500: hsl(43, 59%, 70%);
+  --color-sand-300: hsl(43, 59%, 75%);
   --color-sand-200: hsl(43, 59%, 81%);
   --color-sand-50: hsl(42, 100%, 92%);
   --color-red-500: hsl(6, 96%, 59%);
@@ -42,7 +43,7 @@ body.light {
   --background-link-hover: var(--color-chartreuse-400);
   --background-text-alt: var(--color-mauve-100);
   --color-text-primary: var(--color-dark);
-  --color-text-header: var(--color-gold-700);
+  --color-text-header: var(--color-chartreuse-700);
   --color-text-link: var(--color-dark-800);
   --color-border: var(--color-dark-800);
   --toggle-icon-filter: none;
@@ -97,20 +98,19 @@ body.light.haxor {
   --color-black: #000000;
   --color-green: #00ff00;
   --color-blue: #0000ff;
-  --color-red: #ff0000;
+  --color-light-blue: rgba(0, 0, 255, 0.2);
 
   --background-body: var(--color-white);
   --background-page: transparent;
   --background-link-hover: var(--color-green);
-  --background-text-alt: var(--color-white);
-
+  --background-text-alt: var(--color-light-blue);
   --color-text-primary: var(--color-black);
   --color-text-header: var(--color-blue);
   --color-text-link: var(--color-black);
-  --color-border: var(--color-red);
+  --color-border: var(--color-blue);
   --code-background: var(--color-blue);
   --code-border: transparent;
-  --code-text-shadow: 0 0 0 var(--color-white);
+  --code-text-shadow: none;
   --code-theme-color-1: var(--color-white);
   --code-theme-color-2: var(--color-white);
   --code-theme-color-3: var(--color-white);
@@ -136,9 +136,9 @@ body.dark.haxor {
   --color-text-header: var(--color-green-200);
   --color-text-link: var(--color-green-100);
   --color-border: var(--color-green-300);
-  --code-text-shadow: 0 0 5px var(--color-green-100);
+  --code-text-shadow: 0 0 3px var(--color-green-100);
   --code-background: var(--color-green-900);
-  --code-border: rgb(0, 255, 0);
+  --code-border: var(--color-green-100);
   --code-theme-color-1: var(--color-green-100);
   --code-theme-color-2: var(--color-green-100);
   --code-theme-color-3: var(--color-green-100);
