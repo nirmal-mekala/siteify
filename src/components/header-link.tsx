@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'preact/hooks';
 
 function HeaderLink() {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
   const [isHovered, setIsHovered] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(prefersDark);
   const [haxorMode, setHaxorMode] = useState(false);
 
   const handleMouseEnter = () => {
@@ -22,10 +24,10 @@ function HeaderLink() {
   };
 
   const containerStyle = {
-    width: '100px',
-    height: '50px',
-    backgroundColor: '#ddd',
-    borderRadius: '25px',
+    width: '80px',
+    height: '40px',
+    backgroundColor: 'magenta',
+    borderRadius: '20px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -47,19 +49,19 @@ function HeaderLink() {
   };
 
   const thumbStyle = {
-    width: '40px',
-    height: '40px',
-    backgroundColor: 'white',
+    width: '30px',
+    height: '30px',
+    backgroundColor: 'blue',
     borderRadius: '50%',
     position: 'absolute',
     top: '5px',
-    left: darkMode ? '55px' : '5px',
+    left: darkMode ? '44px' : '4px',
     transition: 'left 0.3s ease',
   };
 
   const thumbStyleHaxor = {
     ...thumbStyle,
-    left: haxorMode ? '5px' : '55px',
+    left: haxorMode ? '4px' : '44px',
   };
 
   // TODO - make this real CSS lol
@@ -84,6 +86,7 @@ function HeaderLink() {
         <span>la</span>
       </a>
       <div style={{ display: 'flex', gap: '10px' }}>
+        {/* componentize */}
         <div
           style={containerStyle}
           role="button"
@@ -119,13 +122,6 @@ function HeaderLink() {
           </div>
           <div style={thumbStyleHaxor} />
         </div>
-
-        {/*
-          <button onClick={themeUpdater('light')}>lt</button>
-          <button onClick={themeUpdater('dark')}>dk</button>
-          <button onClick={themeUpdater('haxor-light')}>haxor-lt</button>
-          <button onClick={themeUpdater('haxor-dark')}>haxor-dk</button>
-        */}
       </div>
     </div>
   );
