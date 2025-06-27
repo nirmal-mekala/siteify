@@ -1,5 +1,37 @@
 import { useState, useEffect } from 'preact/hooks';
 
+function Toggle(props: {
+  left: boolean;
+  toggle: () => void;
+  leftEmoji: string;
+  rightEmoji: string;
+}) {
+  const { left, toggle, leftEmoji, rightEmoji } = props;
+
+  // TODO consider handling via CSS - would feel cleaner
+  const thumbStyle = {
+    left: left ? '44px' : '4px',
+  };
+
+  return (
+    <div
+      className="toggle-container"
+      role="button"
+      tabIndex={0}
+      onClick={toggle}
+      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggle()}
+    >
+      <div className="toggle-side">
+        <span className="toggle-icon">{left ? leftEmoji : ''}</span>
+      </div>
+      <div className="toggle-side">
+        <span className="toggle-icon">{left ? '' : rightEmoji}</span>
+      </div>
+      <div className="toggle-thumb" style={thumbStyle} />
+    </div>
+  );
+}
+
 function HeaderLink() {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -23,54 +55,26 @@ function HeaderLink() {
     setHaxorMode(!haxorMode);
   };
 
-  const containerStyle = {
-    width: '80px',
-    height: '40px',
-    backgroundColor: 'magenta',
-    borderRadius: '20px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    position: 'relative',
-    padding: '0 10px',
-    cursor: 'pointer',
-    userSelect: 'none',
-    outline: 'none',
-  };
-
-  const sideStyle = {
-    flex: 1,
-    textAlign: 'center',
-    zIndex: 1,
-  };
-
-  const iconStyle = {
-    fontSize: '24px',
-  };
-
-  const thumbStyle = {
-    width: '30px',
-    height: '30px',
-    backgroundColor: 'blue',
-    borderRadius: '50%',
-    position: 'absolute',
-    top: '5px',
-    left: darkMode ? '44px' : '4px',
-    transition: 'left 0.3s ease',
-  };
-
-  const thumbStyleHaxor = {
-    ...thumbStyle,
-    left: haxorMode ? '4px' : '44px',
-  };
-
-  // TODO - make this real CSS lol
-
   useEffect(() => {
     document.body.classList.remove('light', 'dark', 'haxor');
     document.body.classList.add(darkMode ? 'dark' : 'light');
     if (haxorMode) document.body.classList.add('haxor');
   }, [darkMode, haxorMode]);
+
+  const toggles = [
+    {
+      left: darkMode,
+      toggleMethod: toggleDarkMode,
+      leftEmoji: '🌜',
+      rightEmoji: '🌞',
+    },
+    {
+      left: !haxorMode,
+      toggleMethod: toggleHaxorMode,
+      leftEmoji: '😎',
+      rightEmoji: '😵‍💫',
+    },
+  ];
 
   return (
     <div>
@@ -85,43 +89,16 @@ function HeaderLink() {
         {isHovered && <span>.</span>}
         <span>la</span>
       </a>
+      {/* TODO get rid of style tag  */}
       <div style={{ display: 'flex', gap: '10px' }}>
-        {/* componentize */}
-        <div
-          style={containerStyle}
-          role="button"
-          tabIndex={0}
-          onClick={toggleDarkMode}
-          onKeyDown={(e) =>
-            (e.key === 'Enter' || e.key === ' ') && toggleDarkMode()
-          }
-        >
-          <div style={sideStyle}>
-            <span style={iconStyle}>{darkMode ? '🌜' : ''}</span>
-          </div>
-          <div style={sideStyle}>
-            <span style={iconStyle}>{!darkMode ? '🌞' : ''}</span>
-          </div>
-          <div style={thumbStyle} />
-        </div>
-
-        <div
-          style={containerStyle}
-          role="button"
-          tabIndex={0}
-          onClick={toggleHaxorMode}
-          onKeyDown={(e) =>
-            (e.key === 'Enter' || e.key === ' ') && toggleHaxorMode()
-          }
-        >
-          <div style={sideStyle}>
-            <span style={iconStyle}>{!haxorMode ? '😎' : ''}</span>
-          </div>
-          <div style={sideStyle}>
-            <span style={iconStyle}>{haxorMode ? ' 😵‍💫' : ''}</span>
-          </div>
-          <div style={thumbStyleHaxor} />
-        </div>
+        {toggles.map((toggle) => (
+          <Toggle
+            left={toggle.left}
+            toggle={toggle.toggleMethod}
+            leftEmoji={toggle.leftEmoji}
+            rightEmoji={toggle.rightEmoji}
+          />
+        ))}
       </div>
     </div>
   );

@@ -212,7 +212,6 @@ code {
   font-weight: var(--font-weight-base);
   font-variation-settings: var(--font-variation-mono);
   border: var(--border-width) solid var(--color-border);
-  text-shadow: var(--code-text-shadow);
 }
 
 a > code {

@@ -37,6 +37,7 @@ body.light {
   --color-gold-700: hsl(42, 95%, 35%);
   --color-gold-500: hsl(42, 95%, 58%);
 
+  /* TODO do a pass over toggle colors. feel a bit off. might require var renames too or new vars */
   --background-body: var(--color-sand-50);
   --background-link-hover: var(--color-chartreuse-400);
   --background-text-alt: var(--color-mauve-100);
@@ -44,6 +45,7 @@ body.light {
   --color-text-header: var(--color-gold-700);
   --color-text-link: var(--color-dark-800);
   --color-border: var(--color-dark-800);
+  --toggle-icon-filter: none;
   --code-background: var(--color-dark-900);
   --code-border: transparent;
   --code-text-shadow: none;
@@ -73,6 +75,7 @@ body.dark {
   --color-text-header: var(--color-sage-200);
   --color-text-link: var(--color-berry-200);
   --color-border: var(--color-grey-800);
+  --toggle-icon-filter: grayscale(100%);
   --code-background: var(--color-grey-900);
   --code-border: var(--color-grey-500);
   --code-text-shadow: none;
@@ -100,6 +103,7 @@ body.light.haxor {
   --background-page: transparent;
   --background-link-hover: var(--color-green);
   --background-text-alt: var(--color-white);
+
   --color-text-primary: var(--color-black);
   --color-text-header: var(--color-blue);
   --color-text-link: var(--color-black);
@@ -134,7 +138,7 @@ body.dark.haxor {
   --color-border: var(--color-green-300);
   --code-text-shadow: 0 0 5px var(--color-green-100);
   --code-background: var(--color-green-900);
-  --code-border: transparent;
+  --code-border: rgb(0, 255, 0);
   --code-theme-color-1: var(--color-green-100);
   --code-theme-color-2: var(--color-green-100);
   --code-theme-color-3: var(--color-green-100);

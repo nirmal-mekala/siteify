@@ -73,6 +73,7 @@ pre code.hljs {
   padding-right: var(--spacing-container-x);
   padding-left: var(--spacing-container-x);
   border: var(--border-width) solid var(--code-border);
+  text-shadow: var(--code-text-shadow);
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
