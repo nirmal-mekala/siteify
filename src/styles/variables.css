@@ -29,16 +29,16 @@ body.light {
   --color-mauve-500: hsl(344, 47%, 68%);
   --color-mauve-100: hsl(344, 47%, 80%);
   --color-chartreuse-500: hsl(61, 66%, 44%);
-  --color-chartreuse-300: hsl(61, 66%, 70%);
-  --color-sand-900: hsl(30, 12%, 51%);
+  --color-chartreuse-400: hsl(61, 66%, 55%);
+  --color-sand-500: hsl(43, 59%, 70%);
   --color-sand-200: hsl(43, 59%, 81%);
   --color-sand-50: hsl(42, 100%, 92%);
   --color-red-500: hsl(6, 96%, 59%);
-  --color-gold-700: hsl(42, 95%, 40%);
+  --color-gold-700: hsl(42, 95%, 35%);
   --color-gold-500: hsl(42, 95%, 58%);
 
   --background-body: var(--color-sand-50);
-  --background-link-hover: var(--color-chartreuse-300);
+  --background-link-hover: var(--color-chartreuse-400);
   --background-text-alt: var(--color-mauve-100);
   --color-text-primary: var(--color-dark);
   --color-text-header: var(--color-gold-700);
@@ -51,7 +51,7 @@ body.light {
   --code-theme-color-3: var(--color-gold-500);
   --code-theme-color-4: var(--color-mauve-500);
   --code-theme-color-5: var(--color-red-500);
-  --code-theme-color-comment: var(--color-sand-900);
+  --code-theme-color-comment: var(--color-sand-500);
 }
 
 body.dark {
@@ -60,6 +60,7 @@ body.dark {
   --color-grey-500: hsl(0, 0%, 58%);
   --color-grey-100: hsl(0, 0%, 92%);
   --color-berry-300: hsl(332, 40%, 63%);
+  --color-berry-200: hsl(332, 40%, 70%);
   --color-sage-200: hsl(80, 29%, 61%);
   --color-mustard-200: hsl(40, 58%, 62%);
   --color-tomato-200: hsl(2, 69%, 71%);
@@ -69,10 +70,10 @@ body.dark {
   --background-text-alt: var(--color-grey-800);
   --color-text-primary: var(--color-grey-100);
   --color-text-header: var(--color-sage-200);
-  --color-text-link: var(--color-berry-300);
+  --color-text-link: var(--color-berry-200);
   --color-border: var(--color-grey-800);
   --code-background: var(--color-grey-900);
-  --code-border: transparent;
+  --code-border: var(--color-grey-500);
   --code-theme-color-1: var(--color-grey-100);
   --code-theme-color-2: var(--color-mustard-200);
   --code-theme-color-3: var(--color-sage-200);
@@ -90,7 +91,7 @@ body.dark {
  *        rm "color entirely?"
  */
 
-body.haxor-light {
+body.light.haxor {
   --color-white: #ffffff;
   --color-black: #000000;
   --color-green: #00ff00;
@@ -115,7 +116,7 @@ body.haxor-light {
   --code-theme-color-comment: var(--color-white);
 }
 
-body.haxor-dark {
+body.dark.haxor {
   --color-green-900: hsl(144, 100%, 3%);
   --color-green-800: hsl(142, 100%, 6%);
   --color-green-600: hsl(140, 100%, 15%);
@@ -127,6 +128,7 @@ body.haxor-dark {
   --background-body: var(--color-green-800);
   --background-page: transparent;
   --background-text-alt: var(--color-green-900);
+  --background-link-hover: var(--color-green-800);
   --color-text-primary: var(--color-grey-100);
   --color-text-header: var(--color-green-200);
   --color-text-link: var(--color-green-100);

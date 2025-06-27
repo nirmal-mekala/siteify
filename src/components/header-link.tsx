@@ -2,8 +2,8 @@ import { useState, useEffect } from 'preact/hooks';
 
 function HeaderLink() {
   const [isHovered, setIsHovered] = useState(false);
-  const [theme, setTheme] = useState('light');
-  // light funk dark fancy
+  const [darkMode, setDarkMode] = useState(false);
+  const [haxorMode, setHaxorMode] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -13,19 +13,62 @@ function HeaderLink() {
     setIsHovered(false);
   };
 
-  const themeUpdater = (theme: string) => {
-    return () => setTheme(theme);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
   };
 
+  const toggleHaxorMode = () => {
+    setHaxorMode(!haxorMode);
+  };
+
+  const containerStyle = {
+    width: '100px',
+    height: '50px',
+    backgroundColor: '#ddd',
+    borderRadius: '25px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    position: 'relative',
+    padding: '0 10px',
+    cursor: 'pointer',
+    userSelect: 'none',
+    outline: 'none',
+  };
+
+  const sideStyle = {
+    flex: 1,
+    textAlign: 'center',
+    zIndex: 1,
+  };
+
+  const iconStyle = {
+    fontSize: '24px',
+  };
+
+  const thumbStyle = {
+    width: '40px',
+    height: '40px',
+    backgroundColor: 'white',
+    borderRadius: '50%',
+    position: 'absolute',
+    top: '5px',
+    left: darkMode ? '55px' : '5px',
+    transition: 'left 0.3s ease',
+  };
+
+  const thumbStyleHaxor = {
+    ...thumbStyle,
+    left: haxorMode ? '5px' : '55px',
+  };
+
+  // TODO - make this real CSS lol
+
   useEffect(() => {
-    document.body.classList.remove(
-      'light',
-      'dark',
-      'haxor-light',
-      'haxor-dark',
-    );
-    document.body.classList.add(theme);
-  }, [theme]);
+    document.body.classList.remove('light', 'dark', 'haxor');
+    document.body.classList.add(darkMode ? 'dark' : 'light');
+    if (haxorMode) document.body.classList.add('haxor');
+  }, [darkMode, haxorMode]);
 
   return (
     <div>
@@ -40,12 +83,49 @@ function HeaderLink() {
         {isHovered && <span>.</span>}
         <span>la</span>
       </a>
-      <div>
-        <span style={{ marginRight: '0.5rem' }}>selected: {theme}</span>
-        <button onClick={themeUpdater('light')}>lt</button>
-        <button onClick={themeUpdater('dark')}>dk</button>
-        <button onClick={themeUpdater('haxor-light')}>haxor-lt</button>
-        <button onClick={themeUpdater('haxor-dark')}>haxor-dk</button>
+      <div style={{ display: 'flex', gap: '10px' }}>
+        <div
+          style={containerStyle}
+          role="button"
+          tabIndex={0}
+          onClick={toggleDarkMode}
+          onKeyDown={(e) =>
+            (e.key === 'Enter' || e.key === ' ') && toggleDarkMode()
+          }
+        >
+          <div style={sideStyle}>
+            <span style={iconStyle}>{darkMode ? '🌜' : ''}</span>
+          </div>
+          <div style={sideStyle}>
+            <span style={iconStyle}>{!darkMode ? '🌞' : ''}</span>
+          </div>
+          <div style={thumbStyle} />
+        </div>
+
+        <div
+          style={containerStyle}
+          role="button"
+          tabIndex={0}
+          onClick={toggleHaxorMode}
+          onKeyDown={(e) =>
+            (e.key === 'Enter' || e.key === ' ') && toggleHaxorMode()
+          }
+        >
+          <div style={sideStyle}>
+            <span style={iconStyle}>{!haxorMode ? '😎' : ''}</span>
+          </div>
+          <div style={sideStyle}>
+            <span style={iconStyle}>{haxorMode ? ' 😵‍💫' : ''}</span>
+          </div>
+          <div style={thumbStyleHaxor} />
+        </div>
+
+        {/*
+          <button onClick={themeUpdater('light')}>lt</button>
+          <button onClick={themeUpdater('dark')}>dk</button>
+          <button onClick={themeUpdater('haxor-light')}>haxor-lt</button>
+          <button onClick={themeUpdater('haxor-dark')}>haxor-dk</button>
+        */}
       </div>
     </div>
   );
