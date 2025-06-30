@@ -23,15 +23,17 @@ body {
 
 /* TODO spacing pass */
 
+/*
 #page > hr,
 main > hr {
-  /* TODO variablize spacing? */
   margin: 2rem var(--spacing-container-x) 2rem var(--spacing-container-x);
   height: 0;
   border-top-width: 1px;
   border-bottom-width: 0px;
   border-color: var(--color-border);
 }
+*/
+/* TODO variablize spacing? */
 
 main {
 }
