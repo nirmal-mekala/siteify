@@ -86,6 +86,7 @@ main > small {
 /* TODO move away from hr */
 /* TODO improve componentization of headerlink */
 /* TODO HeaderLink --> …Header (?) */
+/* TODO mobile --> ul/ol */
 
 blockquote {
   background: var(--background-text-alt);
