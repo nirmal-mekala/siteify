@@ -22,6 +22,7 @@
   --border-width: 1px;
 }
 
+/* TODO - THEME css file + other vars css file (?) */
 body.light {
   --color-dark-900: hsl(0, 0%, 16%);
   --color-dark-800: hsl(0, 0%, 21%);
@@ -38,8 +39,6 @@ body.light {
   --color-red-500: hsl(6, 96%, 59%);
   --color-gold-700: hsl(42, 95%, 35%);
   --color-gold-500: hsl(42, 95%, 58%);
-
-  /* TODO do a pass over toggle colors. feel a bit off. might require var renames too or new vars */
   --background-body: var(--color-sand-50);
   --background-link-hover: var(--color-chartreuse-400);
   --background-text-alt: var(--color-mauve-100);
@@ -98,8 +97,8 @@ body.light.haxor {
   --color-white: #ffffff;
   --color-black: #000000;
   --color-green: #00ff00;
-  --color-blue: #0000ff;
-  --color-light-blue: rgba(0, 0, 255, 0.2);
+  --color-blue: hsl(240, 100%, 50%);
+  --color-light-blue: hsl(240, 100%, 90%);
 
   --background-body: var(--color-white);
   --background-page: transparent;
