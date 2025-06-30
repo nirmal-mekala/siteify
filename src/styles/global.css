@@ -21,8 +21,11 @@ body {
   */
 }
 
+/* TODO spacing pass */
+
 #page > hr,
 main > hr {
+  /* TODO variablize spacing? */
   margin: 2rem var(--spacing-container-x) 2rem var(--spacing-container-x);
   height: 0;
   border-top-width: 1px;
@@ -41,7 +44,7 @@ h5,
 h6 {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-header);
-  margin: 2rem 0 2rem 0;
+  margin: var(--spacing-header-y) 0 var(--spacing-header-y) 0;
 }
 
 h1 {
@@ -80,6 +83,9 @@ main > h6,
 main > small {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
 }
+/* TODO move away from hr */
+/* TODO improve componentization of headerlink */
+/* TODO HeaderLink --> …Header (?) */
 
 blockquote {
   background: var(--background-text-alt);

@@ -1,36 +1,62 @@
 :root {
-  --text-xxl: 2rem;
+  /*  --text-xxl: 2rem;
   --text-xl: 1.75rem;
   --text-lg: 1.5rem;
   --text-md: 1.25rem;
   --text-sm: 0.75rem;
   --text-xs: 0.625rem;
+  --spacing-container-x: 1rem;*/
+  /* TODO buttons need mobile sizes… */
+
+  /* TEXT SIZE */
+  --text-xxl: 1.75rem;
+  --text-xl: 1.5rem;
+  --text-lg: 1.25rem;
+  --text-md: 1rem;
+  --text-sm: 0.75rem;
+  --text-xs: 0.5rem;
+
+  /* SPACING */
   --spacing-container-x: 1rem;
+  --spacing-header-y: 1rem;
+  /* TODO text… x? y? what is thsi? */
   --spacing-text: 0.375rem;
+  /* TODO name ..??*/
+  --text-margin-y: 0.75rem;
+
+  /* FONT */
   --font-family-sans: 'Recursive', sans-serif;
   --font-family-mono: 'Recursive', monospace;
   --font-weight-base: 500;
   --font-weight-bold: 800;
-  --text-margin-y: 1rem;
   --font-variation-slant-small: 'slnt' -2;
   --font-variation-slant-full: 'slnt' -10;
   --font-variation-mono: 'MONO' 1;
   --font-variation-casual: 'CASL' 0.5;
   --font-variation-cursive: 'CRSV' 1;
+
+  /* ANIMATION */
   --animation-time: 0.3s;
   --animation-style: ease-in-out;
+
+  /* BORDERS */
   --border-width: 1px;
 }
 
 /* TODO - THEME css file + other vars css file (?) */
 @media screen and (min-width: 768px) {
   :root {
+    /* TEXT SIZE */
     --text-xxl: 3rem;
     --text-xl: 1.75rem;
     --text-lg: 1.5rem;
     --text-md: 1.25rem;
     --text-sm: 0.75rem;
     --text-xs: 0.5rem;
+
+    /* TODO probably need these as var names, not headers… */
+    /* SPACING */
     --spacing-container-x: 2rem;
+    --spacing-header-y: 2rem;
   }
 }
