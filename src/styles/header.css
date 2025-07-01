@@ -33,9 +33,13 @@ header > div {
   display: flex;
   justify-content: space-between;
 }
-/* TODO focus styles on toggle! */
 
-.toggle-container {
+.toggles-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle {
   width: 80px;
   height: 40px;
   background-color: var(--background-text-alt); /* TODO rename */
@@ -47,7 +51,6 @@ header > div {
   padding: 0 10px;
   cursor: pointer;
   user-select: none;
-  outline: none;
 }
 
 .toggle-side {
@@ -56,14 +59,19 @@ header > div {
   z-index: 1;
 }
 
-.toggle-thumb {
+.toggle-slider {
   width: 30px;
   height: 30px;
   background-color: var(--text-header);
   border-radius: 50%;
   position: absolute;
   top: 5px;
+  left: 4px;
   transition: left 0.3s ease;
+}
+
+.toggle-left {
+  left: 44px;
 }
 
 .toggle-icon {
