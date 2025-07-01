@@ -32,7 +32,7 @@ function Toggle(props: {
   );
 }
 
-function HeaderLink() {
+function Header() {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const [isHovered, setIsHovered] = useState(false);
@@ -104,4 +104,4 @@ function HeaderLink() {
   );
 }
 
-export default HeaderLink;
+export default Header;

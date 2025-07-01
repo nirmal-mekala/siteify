@@ -17,9 +17,9 @@ body.light {
   --background-body: var(--color-sand-50);
   --background-link-hover: var(--color-chartreuse-400);
   --background-text-alt: var(--color-mauve-100);
-  --color-text-primary: var(--color-dark-900);
-  --color-text-header: var(--color-mauve-700);
-  --color-text-link: var(--color-dark-900);
+  --text-primary: var(--color-dark-900);
+  --text-header: var(--color-mauve-700);
+  --text-link: var(--color-dark-900);
   --color-border: var(--color-dark-800);
   --toggle-icon-filter: none;
   --code-background: var(--color-dark-900);
@@ -47,9 +47,9 @@ body.dark {
   --background-body: var(--color-grey-900);
   --background-link-hover: var(--color-grey-900);
   --background-text-alt: var(--color-grey-800);
-  --color-text-primary: var(--color-grey-100);
-  --color-text-header: var(--color-sage-200);
-  --color-text-link: var(--color-berry-200);
+  --text-primary: var(--color-grey-100);
+  --text-header: var(--color-sage-200);
+  --text-link: var(--color-berry-200);
   --color-border: var(--color-grey-800);
   --toggle-icon-filter: grayscale(100%);
   --code-background: var(--color-grey-900);
@@ -63,11 +63,6 @@ body.dark {
   --code-theme-color-comment: var(--color-grey-500);
 }
 
-/*
- * TODO - consider "color" for text vs "background" - seems incnosistent because the backgrounds are also colors
- *        rm "color entirely?"
- */
-
 body.light.haxor {
   --color-white: #ffffff;
   --color-black: #000000;
@@ -79,9 +74,9 @@ body.light.haxor {
   --background-page: transparent;
   --background-link-hover: var(--color-green);
   --background-text-alt: var(--color-light-blue);
-  --color-text-primary: var(--color-black);
-  --color-text-header: var(--color-blue);
-  --color-text-link: var(--color-black);
+  --text-primary: var(--color-black);
+  --text-header: var(--color-blue);
+  --text-link: var(--color-black);
   --color-border: var(--color-blue);
   --code-background: var(--color-blue);
   --code-border: transparent;
@@ -107,9 +102,9 @@ body.dark.haxor {
   --background-page: transparent;
   --background-text-alt: var(--color-green-900);
   --background-link-hover: var(--color-green-800);
-  --color-text-primary: var(--color-grey-100);
-  --color-text-header: var(--color-green-200);
-  --color-text-link: var(--color-green-100);
+  --text-primary: var(--color-grey-100);
+  --text-header: var(--color-green-200);
+  --text-link: var(--color-green-100);
   --color-border: var(--color-green-300);
   --code-text-shadow: 0 0 3px var(--color-green-100);
   --code-background: var(--color-green-900);

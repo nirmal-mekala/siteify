@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks';
-import HeaderLink from './components/header-link';
+import Header from './components/header';
 
 export function App() {
-  return <HeaderLink />;
+  return <Header />;
 }

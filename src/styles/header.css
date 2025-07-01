@@ -59,7 +59,7 @@ header > div {
 .toggle-thumb {
   width: 30px;
   height: 30px;
-  background-color: var(--color-text-header);
+  background-color: var(--text-header);
   border-radius: 50%;
   position: absolute;
   top: 5px;
