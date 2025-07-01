@@ -15,12 +15,6 @@ body {
   background: var(--background-page);
 }
 
-/* TODO spacing pass */
-/* TODO variablize spacing? */
-
-main {
-}
-
 h1,
 h2,
 h3,
