@@ -33,7 +33,7 @@ function Toggle(props: {
 }) {
   const { left, toggle, leftEmoji, rightEmoji } = props;
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
     if (['Enter', ' '].includes(e.key)) {
       e.preventDefault();
       toggle();

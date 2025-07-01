@@ -96,7 +96,6 @@ header > div {
 }
 
 .toggle-icon {
-  fontsize: var(--toggle-text-size);
   filter: var(--toggle-icon-filter);
   display: inline-block;
   position: relative;
