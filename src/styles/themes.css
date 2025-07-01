@@ -16,7 +16,7 @@ body.light {
   --color-gold-500: hsl(42, 95%, 58%);
   --background-body: var(--color-sand-50);
   --background-link-hover: var(--color-chartreuse-400);
-  --background-text-alt: var(--color-mauve-100);
+  --background-alt: var(--color-mauve-100);
   --text-primary: var(--color-dark-900);
   --text-header: var(--color-mauve-700);
   --text-link: var(--color-dark-900);
@@ -46,7 +46,7 @@ body.dark {
 
   --background-body: var(--color-grey-900);
   --background-link-hover: var(--color-grey-900);
-  --background-text-alt: var(--color-grey-800);
+  --background-alt: var(--color-grey-800);
   --text-primary: var(--color-grey-100);
   --text-header: var(--color-sage-200);
   --text-link: var(--color-berry-200);
@@ -73,7 +73,7 @@ body.light.haxor {
   --background-body: var(--color-white);
   --background-page: transparent;
   --background-link-hover: var(--color-green);
-  --background-text-alt: var(--color-light-blue);
+  --background-alt: var(--color-light-blue);
   --text-primary: var(--color-black);
   --text-header: var(--color-blue);
   --text-link: var(--color-black);
@@ -100,7 +100,7 @@ body.dark.haxor {
 
   --background-body: var(--color-green-800);
   --background-page: transparent;
-  --background-text-alt: var(--color-green-900);
+  --background-alt: var(--color-green-900);
   --background-link-hover: var(--color-green-800);
   --text-primary: var(--color-grey-100);
   --text-header: var(--color-green-200);

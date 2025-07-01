@@ -4,27 +4,27 @@ header {
   border-bottom: 2px solid var(--color-border);
 }
 
-header a,
-header a:hover,
-header a:focus {
+a.header-link,
+a.header-link:hover,
+a.header-link:focus {
   font-size: var(--text-xl);
   padding: 0;
 }
 
-header a::before {
+a.header-link::before {
   display: none;
 }
 
-header a::after {
+a.header-link::after {
   bottom: 0px;
 }
 
-header > div > a {
+a.header-link {
   position: relative;
   display: inline-block;
 }
 
-header span {
+a.header-link span {
   display: inline-block;
   transition: transform var(--animation-time) var(--animation-style);
 }
@@ -32,6 +32,7 @@ header span {
 header > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .toggles-wrapper {
@@ -40,9 +41,17 @@ header > div {
 }
 
 .toggle {
-  width: 80px;
-  height: 40px;
-  background-color: var(--background-text-alt); /* TODO rename */
+  --toggle-width: 60px;
+  --toggle-height: 30px;
+  --toggle-slider-size: 22px;
+  --toggle-slider-position-left: 33px;
+  --toggle-slider-position-right: 3px;
+  --toggle-slider-position-y: 3.75px;
+  --toggle-text-size: 18px;
+
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  background-color: var(--background-alt);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -53,6 +62,18 @@ header > div {
   user-select: none;
 }
 
+@media screen and (min-width: 768px) {
+  .toggle {
+    --toggle-width: 80px;
+    --toggle-height: 40px;
+    --toggle-slider-size: 30px;
+    --toggle-slider-position-left: 44px;
+    --toggle-slider-position-right: 4px;
+    --toggle-slider-position-y: 5px;
+    --toggle-text-size: 24px;
+  }
+}
+
 .toggle-side {
   flex: 1;
   text-align: center;
@@ -60,22 +81,22 @@ header > div {
 }
 
 .toggle-slider {
-  width: 30px;
-  height: 30px;
+  width: var(--toggle-slider-size);
+  height: var(--toggle-slider-size);
   background-color: var(--text-header);
   border-radius: 50%;
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: var(--toggle-slider-position-vertical);
+  left: var(--toggle-slider-position-right);
   transition: left 0.3s ease;
 }
 
 .toggle-left {
-  left: 44px;
+  left: var(--toggle-slider-position-left);
 }
 
 .toggle-icon {
-  fontsize: 24px;
+  fontsize: var(--toggle-text-size);
   filter: var(--toggle-icon-filter);
   display: inline-block;
   position: relative;

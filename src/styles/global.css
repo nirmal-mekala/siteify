@@ -54,7 +54,7 @@ p {
   font-size: var(--text-md);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-base);
-  margin: var(--text-margin-y) 0 var(--text-margin-y) 0;
+  margin: var(--spacing-paragraph-y) 0 var(--spacing-paragraph-y) 0;
 }
 
 main > p,
@@ -67,10 +67,9 @@ main > h6,
 main > small {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
 }
-/* TODO improve componentization of headerlink */
 
 blockquote {
-  background: var(--background-text-alt);
+  background: var(--background-alt);
   padding: 0.5rem var(--spacing-container-x) 0.5rem var(--spacing-container-x);
   margin: 0.5rem 0 0.5rem 0;
   border: var(--border-width) solid var(--color-border);
@@ -137,7 +136,6 @@ a:visited > code {
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
   text-decoration: none;
-  /* TODO fix... */
   color: var(--text-link);
   font-variation-settings: var(--font-variation-mono);
 }
@@ -186,8 +184,8 @@ a:focus {
 }
 
 code {
-  padding: 0 var(--spacing-text) 0 var(--spacing-text);
-  background: var(--background-text-alt);
+  padding: 0 var(--spacing-code-padding-x) 0 var(--spacing-code-padding-x);
+  background: var(--background-alt);
   font-size: var(--text-md);
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-base);
