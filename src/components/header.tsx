@@ -74,10 +74,26 @@ function Header() {
   };
 
   useEffect(() => {
-    document.body.classList.remove('light', 'dark', 'haxor');
-    document.body.classList.add(darkMode ? 'dark' : 'light');
-    if (haxorMode) document.body.classList.add('haxor');
-  }, [darkMode, haxorMode]);
+    if (darkMode) {
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
+    if (haxorMode) {
+      document.body.classList.add('haxor');
+    } else {
+      document.body.classList.remove('haxor');
+    }
+  }, [haxorMode]);
+
+  useEffect(() => {
+    document.body.classList.remove('hidden');
+  }, []);
 
   const toggles = [
     {
