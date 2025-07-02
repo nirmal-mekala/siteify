@@ -35,7 +35,10 @@ jobs:
       - name: Convert README.md to HTML and inject into index.html
         run: |
           pandoc README.md -f markdown -t html -o readme.html
-          sed -i '/<!-- CONTENT -->/r readme.html' src/index.html
+          sed -i '/<!-- CONTENT -->/{
+            r readme.html
+            d
+          }' index.html
 
       - name: Install dependencies
         run: npm install
