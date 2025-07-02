@@ -1,3 +1,5 @@
-# siteify :sparkles:
+# siteify ✨
 
-> Use `vite` and `preact` to generate JS + CSS bundles that can `siteify` a basic HTML layout with minimal fuss.
+> Siteify HTML content
+
+[Check out this README siteified](https://nirmal.meka.la/siteify)
