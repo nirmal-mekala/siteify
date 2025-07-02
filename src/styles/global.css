@@ -125,6 +125,8 @@ a > code,
 a:focus > code,
 a:active > code,
 a:visited > code {
+  background: transparent;
+  padding: 0;
   position: relative;
   font-family: var(--font-family-mono);
   font-size: var(--text-md);
