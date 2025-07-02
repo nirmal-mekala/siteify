@@ -3,7 +3,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   workflow_dispatch:
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -28,7 +28,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Or your desired Node.js version
+          node-version: '20'
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Convert README.md to HTML and inject into index.html
+        run: |
+          pandoc README.md -f markdown -t html -o readme.html
+          sed -i '/<!-- CONTENT -->/r readme.html' src/index.html
 
       - name: Install dependencies
         run: npm install
@@ -42,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'  # Make sure this matches your build output
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
