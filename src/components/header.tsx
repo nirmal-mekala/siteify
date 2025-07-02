@@ -12,7 +12,7 @@ function HeaderLink() {
   return (
     <a
       class="header-link"
-      href="https:/nirmal.meka.la"
+      href="https://nirmal.meka.la"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
