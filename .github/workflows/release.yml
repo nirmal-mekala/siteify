@@ -50,7 +50,7 @@ jobs:
             git checkout --orphan cdn
           fi
           git rm -rf .
-          rm -rf node-modules dist
+          rm -rf node_modules dist
           cp -r /tmp/dist/* .
           git add .
           git commit -m "Deploy dist from tag $GITHUB_REF"
