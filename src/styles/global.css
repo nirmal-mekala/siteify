@@ -51,14 +51,14 @@ p {
   margin: var(--spacing-paragraph-y) 0 var(--spacing-paragraph-y) 0;
 }
 
-main > p,
-main > h1,
-main > h2,
-main > h3,
-main > h4,
-main > h5,
-main > h6,
-main > small {
+main p,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main small {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
 }
 
@@ -165,11 +165,13 @@ a::before {
     height var(--animation-time) var(--animation-style);
 }
 
-a:hover::before {
+a:hover::before,
+a:focus::before {
   bottom: 0px;
 }
 
-a:hover::after {
+a:hover::after,
+a:focus::after {
   bottom: 0px;
   height: 100%;
 }
@@ -230,5 +232,32 @@ strong > a {
 @media screen and (min-width: 768px) {
   #page {
     max-width: 768px;
+  }
+}
+
+@media print {
+  header {
+    display: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    /*
+     * browsers often ignore background colors by default, 
+     * but to get dark mode to be legible (and to make light 
+     * mode print styles consistent) go with black on print 
+     * for all elements
+     */
+    color: black !important;
   }
 }
