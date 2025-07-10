@@ -34,7 +34,7 @@ jobs:
 
       - name: Convert README.md to HTML and inject into index.html
         run: |
-          pandoc README.md -f markdown -t html -o readme.html
+          pandoc README.md -f gfm -t html -o readme.html
           sed -i '/<!-- CONTENT -->/{
             r readme.html
             d
