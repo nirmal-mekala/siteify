@@ -2,17 +2,16 @@ body {
   display: flex;
   justify-content: center;
   min-width: 100%;
-  background: var(--background-body);
+  background: var(--bg-color-1);
   font-family: var(--font-family-sans);
   font-weight: var(--font-weight-base);
-  color: var(--text-primary);
+  color: var(--fg-color-1);
   font-size: var(--text-md);
 }
 
 #page {
   width: 100%;
   padding: 0;
-  background: var(--background-page);
 }
 
 h1,
@@ -22,7 +21,7 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-weight-bold);
-  color: var(--text-header);
+  color: var(--fg-color-2);
   margin: var(--spacing-header-y) 0 var(--spacing-header-y) 0;
 }
 
@@ -51,22 +50,22 @@ p {
   margin: var(--spacing-paragraph-y) 0 var(--spacing-paragraph-y) 0;
 }
 
-main p,
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6,
-main small {
+main > p,
+main > h1,
+main > h2,
+main > h3,
+main > h4,
+main > h5,
+main > h6,
+main > small {
   padding: 0 var(--spacing-container-x) 0 var(--spacing-container-x);
 }
 
 blockquote {
-  background: var(--background-alt);
+  background: var(--bg-color-2);
   padding: 0.5rem var(--spacing-container-x) 0.5rem var(--spacing-container-x);
   margin: 0.5rem 0 0.5rem 0;
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--fg-color-4);
   font-variation-settings: var(--font-variation-slant-full),
     var(--font-variation-cursive);
 }
@@ -118,7 +117,7 @@ a:visited {
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
   text-decoration: none;
-  color: var(--text-link);
+  color: var(--fg-color-3);
 }
 
 a > code,
@@ -132,14 +131,14 @@ a:visited > code {
   font-size: var(--text-md);
   font-weight: var(--font-weight-base);
   text-decoration: none;
-  color: var(--text-link);
+  color: var(--fg-color-3);
   font-variation-settings: var(--font-variation-mono);
 }
 
 /* used for anchor tag background effect */
 a::after {
   content: '';
-  background: var(--background-link-hover);
+  background: var(--bg-color-3);
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -154,7 +153,7 @@ a::after {
 /* underline */
 a::before {
   content: '';
-  background: var(--text-link);
+  background: var(--fg-color-3);
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -183,12 +182,12 @@ a:focus {
 
 code {
   padding: 0 var(--spacing-code-padding-x) 0 var(--spacing-code-padding-x);
-  background: var(--background-alt);
+  background: var(--bg-color-2);
   font-size: var(--text-md);
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-base);
   font-variation-settings: var(--font-variation-mono);
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--fg-color-4);
 }
 
 a > code {
@@ -227,6 +226,11 @@ em > a:focus {
 strong,
 strong > a {
   font-weight: var(--font-weight-bold);
+}
+
+/* pandoc GFM todo --> HTML */
+ul.task-list > li > label > input {
+  margin-right: 0.75rem;
 }
 
 @media screen and (min-width: 768px) {
