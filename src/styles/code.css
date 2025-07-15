@@ -16,6 +16,7 @@
 
 .hljs-attribute,
 .hljs-attr,
+.hljs-tag .hljs-attr,
 .hljs-symbol,
 .hljs-regexp,
 .hljs-link,
@@ -33,6 +34,7 @@
 .hljs-built_in,
 .hljs-selector-attr,
 .hljs-selector-pseudo,
+.hljs-selector-class,
 .hljs-addition,
 .hljs-variable,
 .hljs-template-tag,
