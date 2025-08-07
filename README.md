@@ -104,11 +104,29 @@ script tags can go at the end of your `body` tag.
 </script>
 ```
 
+### optional: customize
+
+You can customize whether or not the secondary toggle renders, and what class it
+toggles. You can also customize the header link.
+
+
+```
+<script>
+  window.SITEIFY_CONFIG = {
+    secondaryToggle: {
+      disabled: false,
+      className: "solarized"
+    },
+    headerLink: {
+      text: "nirmal",
+      url: "https://nirmal-mekala.github.io"
+    }
+  }
+</script>
+```
+
 ## todo
 
-- [ ] `window.SITEIFY_CONFIG` !! - make header link text, hover text, URL,
-      mode toggles, alt style class all configurable. keep defaults to make
-      quickly standing up a site with defaults easy.
 - [ ] breadcrumb support in header link?
 - [ ] app (full) width for `#page` - adapt this layout to uses
       beyond just blog-like content
