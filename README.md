@@ -131,5 +131,3 @@ toggles. You can also customize the header link.
 ## todo
 
 - [ ] breadcrumb support in header link?
-- [ ] app (full) width for `#page` - adapt this layout to uses
-      beyond just blog-like content
