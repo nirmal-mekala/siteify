@@ -36,7 +36,8 @@ Siteify expects the following page layout.
 
 The `hidden` class will be removed on page load (see below). The script
 injects a `header` tag within `#page` above `main`. Consider `main` or its
-direct descendent as the root if using a framework.
+direct descendent as the root if using a framework. You can add a `.full-width`
+class to the `#page` if desired.
 
 ### add `script` and `style` tags
 
@@ -105,6 +106,8 @@ script tags can go at the end of your `body` tag.
 ```
 
 ### optional: customize
+
+#### `SITEIFY_CONFIG`
 
 You can customize whether or not the secondary toggle renders, and what class it
 toggles. You can also customize the header link.
