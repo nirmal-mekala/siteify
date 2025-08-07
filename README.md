@@ -107,7 +107,7 @@ script tags can go at the end of your `body` tag.
 
 ### optional: customize
 
-#### `SITEIFY_CONFIG`
+#### set up `SITEIFY_CONFIG`
 
 You can customize whether or not the secondary toggle renders, and what class it
 toggles. You can also customize the header link.
