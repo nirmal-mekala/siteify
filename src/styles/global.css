@@ -66,8 +66,8 @@ blockquote {
   padding: 0.5rem var(--spacing-container-x) 0.5rem var(--spacing-container-x);
   margin: 0.5rem 0 0.5rem 0;
   border: var(--border-width) solid var(--fg-color-4);
-  font-variation-settings: var(--font-variation-slant-full),
-    var(--font-variation-cursive);
+  font-variation-settings:
+    var(--font-variation-slant-full), var(--font-variation-cursive);
 }
 
 ol,
@@ -83,8 +83,8 @@ li {
 
 @keyframes hover {
   100% {
-    font-variation-settings: var(--font-variation-casual),
-      var(--font-variation-slant-small);
+    font-variation-settings:
+      var(--font-variation-casual), var(--font-variation-slant-small);
     font-weight: var(--font-weight-bold);
   }
 }
@@ -94,16 +94,18 @@ li {
     font-variation-settings: var(--font-variation-mono);
   }
   100% {
-    font-variation-settings: var(--font-variation-casual),
-      var(--font-variation-mono), var(--font-variation-slant-small);
+    font-variation-settings:
+      var(--font-variation-casual), var(--font-variation-mono),
+      var(--font-variation-slant-small);
     font-weight: var(--font-weight-bold);
   }
 }
 
 @keyframes italic-hover {
   100% {
-    font-variation-settings: var(--font-variation-casual),
-      var(--font-variation-slant-full), var(--font-variation-cursive);
+    font-variation-settings:
+      var(--font-variation-casual), var(--font-variation-slant-full),
+      var(--font-variation-cursive);
     font-weight: var(--font-weight-bold);
   }
 }
@@ -137,7 +139,7 @@ a:visited > code {
 
 /* used for anchor tag background effect */
 a::after {
-  content: '';
+  content: "";
   background: var(--bg-color-3);
   position: absolute;
   left: 0;
@@ -152,7 +154,7 @@ a::after {
 
 /* underline */
 a::before {
-  content: '';
+  content: "";
   background: var(--fg-color-3);
   position: absolute;
   left: 0;
@@ -207,13 +209,14 @@ a:focus > code {
 
 code > em,
 em > code {
-  font-variation-settings: var(--font-variation-mono),
-    var(--font-variation-slant-full), var(--font-variation-cursive);
+  font-variation-settings:
+    var(--font-variation-mono), var(--font-variation-slant-full),
+    var(--font-variation-cursive);
 }
 
 em {
-  font-variation-settings: var(--font-variation-slant-full),
-    var(--font-variation-cursive);
+  font-variation-settings:
+    var(--font-variation-slant-full), var(--font-variation-cursive);
 }
 
 a:hover > em,
@@ -236,6 +239,10 @@ ul.task-list > li > label > input {
 @media screen and (min-width: 768px) {
   #page {
     max-width: 768px;
+  }
+
+  #page.full-width {
+    max-width: 100%;
   }
 }
 
