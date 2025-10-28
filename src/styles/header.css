@@ -53,6 +53,7 @@ header > div {
   height: var(--toggle-height);
   background-color: var(--bg-color-2);
   border-radius: 20px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
