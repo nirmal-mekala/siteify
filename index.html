@@ -12,6 +12,63 @@
       href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.SITEIFY_THEME_SELECTION_KEY = 'siteifyThemeSelection';
+      var DEFAULT_ALTERNATE_THEME = 'haxor';
+
+      function isSiteifySelections (v) {
+        if (typeof v !== 'object' || v === null) return false;
+        const { darkMode, alternateTheme } = v
+        return [darkMode, alternateTheme].every((value) => typeof value === 'boolean');
+      };
+
+      function siteifySelections(userPrefersDark, secondaryToggleEnabled) {
+        const DEFAULT_SELECTIONS = {
+          darkMode: userPrefersDark,
+          alternateTheme: false,
+        };
+        try {
+          const selectionsString = localStorage.getItem(window.SITEIFY_THEME_SELECTION_KEY) || '';
+          const selectionsObj = JSON.parse(selectionsString);
+          if (isSiteifySelections(selectionsObj)) {
+            return secondaryToggleEnabled ? selectionsObj : { ...selectionsObj, alternateTheme: false };
+          } else {
+            throw new Error('selections did not match expected shape');
+          }
+        } catch (e) {
+          console.error(e)
+          return DEFAULT_SELECTIONS;
+        }
+      }
+
+      window.siteifyThemeConfig = function () {
+        var userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var siteifyConfig = window['SITEIFY_CONFIG']
+        var { disabled: secondaryToggleDisabled, className: alternateThemeClass } = siteifyConfig?.secondaryToggle ?? {};
+        var selections = siteifySelections(userPrefersDark, !secondaryToggleDisabled)
+        return { siteifyConfig, alternateThemeClass: alternateThemeClass ?? DEFAULT_ALTERNATE_THEME, ...selections };
+      }
+
+      function initializeTheme() {
+        var configResult = window.siteifyThemeConfig();
+        if (configResult.darkMode) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.add('light')
+        }
+        if (!configResult.siteifyConfig?.secondaryToggle?.disabled && configResult.alternateTheme) {
+          console.log('alternate theme??')
+          document.documentElement.classList.add(configResult.alternateThemeClassName || DEFAULT_ALTERNATE_THEME)
+        }
+      }
+
+      initializeTheme();
+      document.addEventListener("DOMContentLoaded", async () => {
+        await document.fonts.ready;
+        document.body.classList.remove('hidden');
+      });
+
+    </script>
     <style>
       body.hidden {
         visibility: hidden;
