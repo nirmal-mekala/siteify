@@ -44,6 +44,13 @@ function Header() {
     writeLocalStorage(darkMode, alternateTheme);
   }, [darkMode, alternateTheme]);
 
+  useEffect(() => {
+    // Unhide here to avoid layout shift
+    document.fonts.ready.then(() => {
+      document.body.classList.remove('hidden');
+    });
+  }, []);
+
   return (
     <div>
       <HeaderLink />
