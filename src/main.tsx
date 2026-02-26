@@ -15,7 +15,7 @@ declare global {
       };
     };
     SITEIFY_THEME_SELECTION_KEY: string;
-    config: () => {
+    siteifyThemeConfig: () => {
       siteifyConfig: (typeof window)['SITEIFY_CONFIG'];
       alternateThemeClass: string;
       darkMode: boolean;

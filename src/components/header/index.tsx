@@ -14,7 +14,7 @@ function Header() {
     alternateThemeClass,
     darkMode: initialDarkModeValue,
     alternateTheme: initialAlternateThemeValue,
-  } = window.config();
+  } = window.siteifyThemeConfig();
   const [darkMode, setDarkMode] = useState(initialDarkModeValue);
   const [alternateTheme, setAlternateTheme] = useState(initialAlternateThemeValue);
 

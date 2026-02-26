@@ -41,7 +41,7 @@
         }
       }
 
-      window.config = function config () {
+      window.siteifyThemeConfig = function () {
         var userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         var siteifyConfig = window['SITEIFY_CONFIG']
         var { disabled: secondaryToggleDisabled, className: alternateThemeClass } = siteifyConfig?.secondaryToggle ?? {};
@@ -50,7 +50,7 @@
       }
 
       function initializeTheme() {
-        var configResult = window.config();
+        var configResult = window.siteifyThemeConfig();
         if (configResult.darkMode) {
           document.documentElement.classList.add('dark')
         } else {
