@@ -1,4 +1,4 @@
-body.light {
+html.light {
   --color-dark-900: hsl(0, 0%, 16%);
   --color-dark-800: hsl(0, 0%, 21%);
   --color-mauve-700: hsl(344, 47%, 30%);
@@ -35,7 +35,7 @@ body.light {
   --code-theme-color-comment: var(--color-sand-500);
 }
 
-body.dark {
+html.dark {
   --color-grey-900: hsl(0, 0%, 16%);
   --color-grey-800: hsl(0, 0%, 21%);
   --color-grey-500: hsl(0, 0%, 58%);
@@ -65,7 +65,7 @@ body.dark {
   --code-theme-color-comment: var(--color-grey-500);
 }
 
-body.light.haxor {
+html.light.haxor {
   --color-white: #ffffff;
   --color-black: #000000;
   --color-green: #00ff00;
@@ -90,7 +90,7 @@ body.light.haxor {
   --code-theme-color-comment: var(--color-white);
 }
 
-body.dark.haxor {
+html.dark.haxor {
   --color-green-900: hsl(144, 100%, 3%);
   --color-green-800: hsl(142, 100%, 6%);
   --color-green-600: hsl(140, 100%, 15%);

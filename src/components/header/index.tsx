@@ -2,27 +2,11 @@ import { useCallback, useEffect, useState } from 'preact/hooks';
 import { HeaderLink } from '../headerLink';
 import { Toggle } from '../toggle';
 import {
-  config,
   manageAlternateThemeClasses,
   manageDarkModeClasses,
   secondaryToggleEnabled,
   writeLocalStorage,
 } from './utils.ts';
-
-declare global {
-  interface Window {
-    SITEIFY_CONFIG?: {
-      secondaryToggle?: {
-        disabled?: boolean;
-        className?: string;
-      };
-      headerLink?: {
-        text?: string;
-        url?: string;
-      };
-    };
-  }
-}
 
 function Header() {
   const {
@@ -30,7 +14,7 @@ function Header() {
     alternateThemeClass,
     darkMode: initialDarkModeValue,
     alternateTheme: initialAlternateThemeValue,
-  } = config();
+  } = window.config();
   const [darkMode, setDarkMode] = useState(initialDarkModeValue);
   const [alternateTheme, setAlternateTheme] = useState(initialAlternateThemeValue);
 
@@ -59,10 +43,6 @@ function Header() {
     manageAlternateThemeClasses(alternateTheme, alternateThemeClass);
     writeLocalStorage(darkMode, alternateTheme);
   }, [darkMode, alternateTheme]);
-
-  useEffect(() => {
-    document.body.classList.remove('hidden');
-  }, []);
 
   return (
     <div>
