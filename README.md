@@ -71,6 +71,67 @@ The theme uses the _Recursive_ font, available from Google fonts:
 />
 ```
 
+#### inline script for theme loading
+
+Parsing theme after the JS bundle loads and runs is too late. We do that upfront
+and expose some consts and utils while we're at it so that when Preact runs it has them
+handy.
+
+```
+<script>
+  window.SITEIFY_THEME_SELECTION_KEY = 'siteifyThemeSelection';
+  var DEFAULT_ALTERNATE_THEME = 'haxor';
+
+  function isSiteifySelections (v) {
+    if (typeof v !== 'object' || v === null) return false;
+    const { darkMode, alternateTheme } = v
+    return [darkMode, alternateTheme].every((value) => typeof value === 'boolean');
+  };
+
+  function siteifySelections(userPrefersDark, secondaryToggleEnabled) {
+    const DEFAULT_SELECTIONS = {
+      darkMode: userPrefersDark,
+      alternateTheme: false,
+    };
+    try {
+      const selectionsString = localStorage.getItem(window.SITEIFY_THEME_SELECTION_KEY) || '';
+      const selectionsObj = JSON.parse(selectionsString);
+      if (isSiteifySelections(selectionsObj)) {
+        return secondaryToggleEnabled ? selectionsObj : { ...selectionsObj, alternateTheme: false };
+      } else {
+        throw new Error('selections did not match expected shape');
+      }
+    } catch (e) {
+      console.error(e)
+      return DEFAULT_SELECTIONS;
+    }
+  }
+
+  window.siteifyThemeConfig = function () {
+    var userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var siteifyConfig = window['SITEIFY_CONFIG']
+    var { disabled: secondaryToggleDisabled, className: alternateThemeClass } = siteifyConfig?.secondaryToggle ?? {};
+    var selections = siteifySelections(userPrefersDark, !secondaryToggleDisabled)
+    return { siteifyConfig, alternateThemeClass: alternateThemeClass ?? DEFAULT_ALTERNATE_THEME, ...selections };
+  }
+
+  function initializeTheme() {
+    var configResult = window.siteifyThemeConfig();
+    if (configResult.darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.add('light')
+    }
+    if (!configResult.siteifyConfig?.secondaryToggle?.disabled && configResult.alternateTheme) {
+      console.log('alternate theme??')
+      document.documentElement.classList.add(configResult.alternateThemeClassName || DEFAULT_ALTERNATE_THEME)
+    }
+  }
+
+  initializeTheme();
+</script>
+```
+
 #### inline styles to aid initial load
 
 To avoid a flash of unstyled content, create a `hidden` class inline and
