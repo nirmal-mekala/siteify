@@ -57,7 +57,6 @@
           document.documentElement.classList.add('light')
         }
         if (!configResult.siteifyConfig?.secondaryToggle?.disabled && configResult.alternateTheme) {
-          console.log('alternate theme??')
           document.documentElement.classList.add(configResult.alternateThemeClassName || DEFAULT_ALTERNATE_THEME)
         }
       }
